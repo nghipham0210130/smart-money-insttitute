@@ -518,3 +518,20 @@
   display: -webkit-flex;
   display: flex;
 }
+
+//  draw box radius
+@mixin border-radius-custom ($thickness, $color-border, $color-background, $color-text, $radius) {
+  border: $thickness solid $color-border;
+  background-color: $color-background;
+  color: $color-text;
+  border-radius: $radius;
+}
+
+// draw line linear gradient
+@mixin line($width, $thickness, $color-start, $color-end) {
+  content: "";
+  width: $width;
+  height: $thickness;
+  background-image: linear-gradient(to right, $color-start, $color-end);
+  position: absolute;
+}

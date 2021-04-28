@@ -1,15 +1,26 @@
 a {
+  color: $color-default-lightest;
+  text-decoration: none;
   &:hover {
+    color: $grey-light;
     text-decoration: none;
+    border: none;
+    cursor: pointer;
   }
 }
 
-ul, ol, p {
+ul,
+ol,
+p {
   padding: 0;
   margin: 0;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
 }
 
@@ -20,3 +31,4 @@ h1, h2, h3, h4, h5 {
 img {
   max-width: 100%;
 }
+
