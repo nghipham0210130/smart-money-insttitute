@@ -7531,3 +7531,19 @@ img {
   border-radius: 50%;
   margin: 0;
 }
+
+.home .home__content {
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  top: 460px;
+}
+.home .home__background {
+  background-size: cover;
+  background-position: center;
+  height: 900px;
+}

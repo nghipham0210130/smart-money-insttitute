@@ -1,0 +1,19 @@
+.home {
+
+  .home__content {
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    color: $color-default-lightest;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    top: 460px;
+  }
+  .home__background {
+    background-size: cover ;
+    background-position: center;
+    height: 900px;
+  }
+
+}
