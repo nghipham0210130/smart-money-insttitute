@@ -528,10 +528,19 @@
 }
 
 // draw line linear gradient
-@mixin line($width, $thickness, $color-start, $color-end) {
+@mixin line-multi-color($width, $thickness, $color-start, $color-end) {
   content: "";
   width: $width;
   height: $thickness;
   background-image: linear-gradient(to right, $color-start, $color-end);
+  position: absolute;
+}
+
+// draw line linear
+@mixin line-simple-color($width, $thickness, $color) {
+  content: "";
+  width: $width;
+  height: $thickness;
+  color: $color;
   position: absolute;
 }
