@@ -19,6 +19,15 @@ $(function() {
 
     var navHeight = $(".navbar").height();
 
+    $( window ).on("load resize",function() {
+        var width = $(window).width();
+        console.log(width);
+        if(width > 1200) {
+            var temp = (width - 1200)/2;
+            $("ul").style.marginLeft = temp;
+        }
+    });
+
     // Event when click search id
     $(".inner__search").on('click', function(event) {
 

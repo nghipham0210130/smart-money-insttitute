@@ -53,3 +53,30 @@
     }
   }
 }  // End resolve
+
+// Resolve title
+.tilte {
+  h4 {
+    font-size: 48px;
+    font-weight: 300;
+    color: $color-default-darkest;
+    @media #{$info-phone}{
+      font-size: 36px;
+    }
+  }
+  &::after{
+    @include line-simple-color(170px, 4px, $orange-dark);
+  }
+}  // End resolve
+
+// Resolve button
+.btn {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}

@@ -7533,6 +7533,35 @@ img {
   margin: 0;
 }
 
+.tilte h4 {
+  font-size: 48px;
+  font-weight: 300;
+  color: #000;
+}
+@media only screen and (max-width : 767px) {
+  .tilte h4 {
+    font-size: 36px;
+  }
+}
+.tilte::after {
+  content: "";
+  width: 170px;
+  height: 4px;
+  color: #c9923b;
+  position: absolute;
+}
+
+.btn {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
 .home .container {
   /*    width: 100%;
       height: 900px;*/
@@ -7557,7 +7586,7 @@ img {
   }
 }
 .home .container .home__toBottom {
-  top: 654px;
+  top: 680px;
   position: absolute;
   right: 15px;
 }
