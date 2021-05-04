@@ -36,18 +36,6 @@ $(function() {
         //End if
     });
 
-  /*  // Event when click anywhere without search id
-    // Event when click search id
-    $(document).on('click', function(event) {
-        console.log('HAHAHA');
-        if (!$(event.target).closest(".inner__search")) {
-            console.log('hash');
-
-            // Hide input text.
-            $("#search").removeClass('active');
-        }
-    });*/
-
     /**
      * Add smooth scrolling to all links
      */
@@ -80,5 +68,16 @@ $(function() {
             });
         }
         //End if
+    });
+
+    $('.home__background').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        arrows: false,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 2000
     });
 });
