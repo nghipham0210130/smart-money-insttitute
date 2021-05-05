@@ -2,9 +2,9 @@ var navHeight = $(".navbar").height();
 var width = $(window).width();
 var marginLeftElementSameContainer = (width - 1230)/2;
 /**
- * Show inner__collapse when click Hamburger button
- */
-function hamburgerFunction() {
+     * Show inner__collapse when click Hamburger button
+     */
+ function hamburgerFunction() {
     var x = document.getElementById("my__navbar");
     if (x.className === "inner__collapse") {
         x.className += " show";
@@ -19,6 +19,7 @@ function hamburgerFunction() {
 }
 
 $(function() {
+<<<<<<< HEAD
     // Set margin-left for elements not in the container
     $( window ).on("load resize",function() {
         if(width > 1200) {
@@ -28,6 +29,49 @@ $(function() {
             $(".about").find(".about__content").css( "margin-left", marginLeftElementSameContainer + "px" );
             console.log(-marginLeftElementSameContainer + "px");
             myFunction();
+=======
+    var navHeight = $(".navbar").height();
+
+    // Event when click search id
+    document.onclick = function(div) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+            // Store hash
+            var hash = this.hash;
+
+            // Show input text
+            $(".inner__search").find("input").addClass('active');
+            // Change margin-top for inner__search
+            $(".inner__search").css("margin-top", "36px");
+
+
+            // Take event click without #search
+            if (div.target.id !== "search") {
+                // Hidden input text
+                $(".inner__search").find("input").removeClass('active');
+                // Change margin-top for inner__search
+                $(".inner__search").css("margin-top", "45px");
+            }
+        }
+        //End if
+    };
+
+    // Action when load and resize
+    $( window ).on("load resize",function() {
+
+        var width = $(window).width();
+        var marginForElementSameContainer = (width - 1230)/2;
+        
+        // Set margin for elements not in the container
+        if(width > 1200) {
+            $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", marginForElementSameContainer + "px" );
+            //var marginLeftForButtons = marginForElementSameContainer + 135;
+            $(".home").find( ".buttons" ).css( "margin-left", marginForElementSameContainer + "px" );
+            $(".about").find(".about__content").css( "margin-left", marginForElementSameContainer + "px" );
+            //$(".about__content.title").before.css( "left", -marginForElementSameContainer + "px" );
+>>>>>>> 5c1a962853558c67c231f060268ab15101b84598
 
         }
         else {
@@ -49,22 +93,6 @@ $(function() {
         $(".pause" ).css( "display", "block" );
     });
 
-    // Event when click search id
-    $(".inner__search").on('click', function(event) {
-
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Show input text
-            $("#search").addClass('active');
-        }
-        //End if
-    });
 
     /**
      * Add smooth scrolling to all links
