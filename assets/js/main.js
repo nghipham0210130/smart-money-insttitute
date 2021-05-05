@@ -19,12 +19,16 @@ $(function() {
 
     var navHeight = $(".navbar").height();
 
+    // set margin-left for elements not in the container
     $( window ).on("load resize",function() {
         var width = $(window).width();
         console.log(width);
         if(width > 1200) {
-            var temp = (width - 1200)/2;
-            $("ul").style.marginLeft = temp;
+            var temp = (width - 1230)/2;
+            $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", temp + "px" );
+        }
+        else {
+            $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", "0" );
         }
     });
 
