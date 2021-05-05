@@ -89,6 +89,7 @@
             @include line-multi-color(100%, 4px, $orange-dark, $orange-light);
             bottom: 0;
             left: 0;
+            opacity: 1;
             @media #{$info-tablet-vertical}{
               display: none;
             }
