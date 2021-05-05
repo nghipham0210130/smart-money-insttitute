@@ -88,7 +88,12 @@
             }
           }
         }
+
+        &::after {
+          @include line-simple-color( 3px, 14px, $orange-dark );
+        }
       }
+
     }
     .home__background__item {
       background-size: cover ;
@@ -97,6 +102,23 @@
       @media #{$info-phone}{
         height: 700px;
       }
+    }
+  }
+
+  .buttons {
+    display: inline-block;
+    transform: translate(135px, -116px);
+    @media #{$info-phone}{
+      transform: translate(135px, -76px);
+    }
+    svg {
+      color: $orange-dark;
+      font-size: 14px;
+      transform: translateY(-2px);
+    }
+
+    .play {
+      display: none;
     }
   }
 

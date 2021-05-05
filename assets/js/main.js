@@ -19,17 +19,32 @@ $(function() {
 
     var navHeight = $(".navbar").height();
 
-    // set margin-left for elements not in the container
+    // Set margin-left for elements not in the container
     $( window ).on("load resize",function() {
         var width = $(window).width();
-        console.log(width);
         if(width > 1200) {
-            var temp = (width - 1230)/2;
-            $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", temp + "px" );
+            var marginLeftForDots = (width - 1230)/2;
+            $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", marginLeftForDots + "px" );
+            var marginLeftForButtons = marginLeftForDots + 135;
+            $(".home").find( ".buttons" ).css( "margin-left", marginLeftForDots + "px" );
         }
         else {
             $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", "0" );
         }
+    });
+
+    // Action when click pause button
+    $('.pause').on('click', function() {
+        $('.home__background').slick('slickPause');
+        $(".pause" ).css( "display", "none" );
+        $(".play" ).css( "display", "block" );
+    });
+
+    // Action when click play button
+    $('.play').on('click', function() {
+        $('.home__background').slick('slickPlay');
+        $(".play" ).css( "display", "none" );
+        $(".pause" ).css( "display", "block" );
     });
 
     // Event when click search id

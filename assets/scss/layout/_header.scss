@@ -7,7 +7,7 @@
   border: 0;
   z-index: 3;
   height: 100px;
-  @media #{$info-phone}{
+  @media #{$info-tablet-vertical}{
     height: 80px;
   }
 
@@ -20,7 +20,7 @@
     font-size: 13px;
     flex-wrap: wrap;
 
-    @media #{$info-phone}{
+    @media #{$info-tablet-vertical}{
       align-items: center;
       padding-top: 0;
       padding-bottom: 0;
@@ -31,7 +31,7 @@
       display: block;
       img {
         margin-top: 8px;
-        @media #{$info-phone}{
+        @media #{$info-tablet-vertical}{
           height: 64px;
         }
       }
@@ -53,7 +53,7 @@
       z-index: 1;
       display: none;
       color: $color-default-lightest;
-      @media #{$info-phone}{
+      @media #{$info-tablet-vertical}{
         display: block;
         opacity: 0.5;
         font-size: 15px;
@@ -68,7 +68,7 @@
       margin-top: 45px;
       display: block;
       z-index: 1;
-      @media #{$info-phone}{
+      @media #{$info-tablet-vertical}{
         display: none;
         font-size: 13px;
         flex-flow: column;
@@ -89,14 +89,14 @@
             @include line-multi-color(100%, 4px, $orange-dark, $orange-light);
             bottom: 0;
             left: 0;
-            @media #{$info-phone}{
+            @media #{$info-tablet-vertical}{
               display: none;
             }
           }
         }
       }
 
-      @media #{$info-phone}{
+      @media #{$info-tablet-vertical}{
         &.show{
           margin-top: 80px;
           display: block;
@@ -111,7 +111,7 @@
               height: 0;
             }
 
-            &.active:hover{
+            &.active:hover, &.active:active {
               background-color: $orange-dark;
             }
           }
@@ -137,12 +137,12 @@
         &.active {
           display: inline-block;
         }
-        @media #{$info-phone}{
+        @media #{$info-tablet-vertical}{
           width: 70%;
           display: inline-block;
         }
       }
-      @media #{$info-phone}{
+      @media #{$info-tablet-vertical}{
         width: 100%;
       }
     }

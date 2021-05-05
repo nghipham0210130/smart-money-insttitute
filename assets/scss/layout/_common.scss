@@ -1,11 +1,12 @@
 a {
   color: $color-default-lightest;
   text-decoration: none;
-  &:hover {
+  &:hover, &:focus {
     color: $grey-light;
     text-decoration: none;
     border: none;
     cursor: pointer;
+    opacity:0.5;
   }
 }
 
