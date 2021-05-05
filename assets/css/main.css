@@ -7490,6 +7490,10 @@ img {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -7534,22 +7538,24 @@ img {
   margin: 0;
 }
 
-.tilte h4 {
+.title h4 {
   font-size: 48px;
   font-weight: 300;
   color: #000;
+  margin-bottom: 60px;
 }
 @media only screen and (max-width : 767px) {
-  .tilte h4 {
+  .title h4 {
     font-size: 36px;
   }
 }
-.tilte::after {
+.title h4::after {
   content: "";
   width: 170px;
   height: 4px;
-  color: #c9923b;
+  background-color: #c9923b;
   position: absolute;
+  top: 176px;
 }
 
 .btn {
@@ -7564,8 +7570,6 @@ img {
 }
 
 .home .container {
-  /*    width: 100%;
-      height: 900px;*/
   text-transform: uppercase;
   z-index: 1;
   color: #fff;
@@ -7619,10 +7623,10 @@ img {
 .home .home__background {
   position: relative;
 }
-.home .home__background.slick-slider {
+.home .home__background.slick-dotted.slick-slider {
   margin-bottom: 0;
 }
-.home .home__background.slick-slider ul {
+.home .home__background.slick-dotted.slick-slider ul {
   transform: translate(0, -102px);
   text-align: left;
   width: 200px;
@@ -7630,36 +7634,29 @@ img {
   padding-right: 15px;
 }
 @media only screen and (max-width : 767px) {
-  .home .home__background.slick-slider ul.slick-dots {
+  .home .home__background.slick-dotted.slick-slider ul.slick-dots {
     bottom: -40px;
   }
 }
 @media only screen and (max-width : 767px) {
-  .home .home__background.slick-slider ul.slick-dots li {
+  .home .home__background.slick-dotted.slick-slider ul.slick-dots li {
     display: inline-block;
   }
 }
-.home .home__background.slick-slider ul.slick-dots li button {
+.home .home__background.slick-dotted.slick-slider ul.slick-dots li button {
   width: 0;
   height: 0;
 }
-.home .home__background.slick-slider ul.slick-dots li button::before {
+.home .home__background.slick-dotted.slick-slider ul.slick-dots li button::before {
   border: 1px solid #fff;
 }
-.home .home__background.slick-slider ul.slick-dots li.slick-active button::before {
+.home .home__background.slick-dotted.slick-slider ul.slick-dots li.slick-active button::before {
   background-color: #fff;
 }
 @media only screen and (max-width : 767px) {
-  .home .home__background.slick-slider ul.slick-dots li.slick-active button::before {
+  .home .home__background.slick-dotted.slick-slider ul.slick-dots li.slick-active button::before {
     background-color: #fff;
   }
-}
-.home .home__background.slick-slider ul::after {
-  content: "";
-  width: 3px;
-  height: 14px;
-  color: #c9923b;
-  position: absolute;
 }
 .home .home__background .home__background__item {
   background-size: cover;
@@ -7687,4 +7684,38 @@ img {
 }
 .home .buttons .play {
   display: none;
+}
+
+.about {
+  padding-top: 90px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.about .about__content.title::before {
+  content: "";
+  width: 945px;
+  height: 4px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 176px;
+}
+.about .about__content .content {
+  font-weight: 300;
+  max-width: 570px;
+}
+.about .about__content .content h5 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.about .about__content .content p {
+  font-size: 14px;
+}
+.about .about__image {
+  max-width: 875px;
+  height: 620px;
+  background-size: cover;
+  background-position: right;
 }

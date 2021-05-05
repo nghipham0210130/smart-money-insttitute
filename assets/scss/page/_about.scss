@@ -1,0 +1,37 @@
+.about {
+  padding-top: 90px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  .about__content {
+    &.title {
+      &::before{
+        @include line-simple-color(945px, 4px, $color-line-grey);
+        top: 176px;
+      }
+    }
+    .content {
+      font-weight: 300;
+      max-width: 570px;
+      h5 {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+
+  .about__image {
+    max-width: 875px;
+    height: 620px;
+    background-size: cover;
+    background-position: right;
+  }
+
+
+}

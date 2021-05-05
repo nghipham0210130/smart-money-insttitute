@@ -1,3 +1,6 @@
+var navHeight = $(".navbar").height();
+var width = $(window).width();
+var marginLeftElementSameContainer = (width - 1230)/2;
 /**
  * Show inner__collapse when click Hamburger button
  */
@@ -16,17 +19,16 @@ function hamburgerFunction() {
 }
 
 $(function() {
-
-    var navHeight = $(".navbar").height();
-
     // Set margin-left for elements not in the container
     $( window ).on("load resize",function() {
-        var width = $(window).width();
         if(width > 1200) {
-            var marginLeftForDots = (width - 1230)/2;
-            $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", marginLeftForDots + "px" );
-            var marginLeftForButtons = marginLeftForDots + 135;
-            $(".home").find( ".buttons" ).css( "margin-left", marginLeftForDots + "px" );
+            $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", marginLeftElementSameContainer + "px" );
+            //var marginLeftForButtons = marginLeftElementSameContainer + 135;
+            $(".home").find( ".buttons" ).css( "margin-left", marginLeftElementSameContainer + "px" );
+            $(".about").find(".about__content").css( "margin-left", marginLeftElementSameContainer + "px" );
+            console.log(-marginLeftElementSameContainer + "px");
+            myFunction();
+
         }
         else {
             $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", "0" );
@@ -108,4 +110,8 @@ $(function() {
         autoplay: true,
         autoplaySpeed: 2000
     });
+
+    function myFunction() {
+        document.querySelector(".title::before").style.left = -marginLeftElementSameContainer + "px";
+    }
 });

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 // Container begin
 .container {
   max-width: 1200px;
@@ -55,18 +59,21 @@
 }  // End resolve
 
 // Resolve title
-.tilte {
+.title {
   h4 {
     font-size: 48px;
     font-weight: 300;
     color: $color-default-darkest;
+    margin-bottom: 60px;
     @media #{$info-phone}{
       font-size: 36px;
     }
+    &::after{
+      @include line-simple-color(170px, 4px, $orange-dark);
+      top: 176px;
+    }
   }
-  &::after{
-    @include line-simple-color(170px, 4px, $orange-dark);
-  }
+
 }  // End resolve
 
 // Resolve button
