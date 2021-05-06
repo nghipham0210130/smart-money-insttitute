@@ -1,6 +1,4 @@
 var navHeight = $(".navbar").height();
-var width = $(window).width();
-var marginLeftElementSameContainer = (width - 1230)/2;
 /**
      * Show inner__collapse when click Hamburger button
      */
@@ -19,17 +17,6 @@ var marginLeftElementSameContainer = (width - 1230)/2;
 }
 
 $(function() {
-<<<<<<< HEAD
-    // Set margin-left for elements not in the container
-    $( window ).on("load resize",function() {
-        if(width > 1200) {
-            $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", marginLeftElementSameContainer + "px" );
-            //var marginLeftForButtons = marginLeftElementSameContainer + 135;
-            $(".home").find( ".buttons" ).css( "margin-left", marginLeftElementSameContainer + "px" );
-            $(".about").find(".about__content").css( "margin-left", marginLeftElementSameContainer + "px" );
-            console.log(-marginLeftElementSameContainer + "px");
-            myFunction();
-=======
     var navHeight = $(".navbar").height();
 
     // Event when click search id
@@ -71,7 +58,6 @@ $(function() {
             $(".home").find( ".buttons" ).css( "margin-left", marginForElementSameContainer + "px" );
             $(".about").find(".about__content").css( "margin-left", marginForElementSameContainer + "px" );
             //$(".about__content.title").before.css( "left", -marginForElementSameContainer + "px" );
->>>>>>> 5c1a962853558c67c231f060268ab15101b84598
 
         }
         else {
@@ -138,8 +124,4 @@ $(function() {
         autoplay: true,
         autoplaySpeed: 2000
     });
-
-    function myFunction() {
-        document.querySelector(".title::before").style.left = -marginLeftElementSameContainer + "px";
-    }
 });

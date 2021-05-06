@@ -7432,6 +7432,7 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
+  opacity: 1;
 }
 @media only screen and (max-width : 900px) {
   .navbar .container .inner__collapse a:hover::after, .navbar .container .inner__collapse a.active::after {
@@ -7561,7 +7562,7 @@ html {
 .btn {
   text-align: center;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
 }
 .btn:hover {
@@ -7570,8 +7571,6 @@ html {
 }
 
 .home .container {
-  /*    width: 100%;
-      height: 900px;*/
   text-transform: uppercase;
   z-index: 1;
   color: #fff;
@@ -7689,12 +7688,13 @@ html {
 }
 
 .about {
-  padding-top: 90px;
   display: flex;
   flex-direction: row;
   position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
+}
+.about .about__content {
+  padding: 90px 0 100px 15px;
+  position: relative;
 }
 .about .about__content.title::before {
   content: "";
@@ -7706,18 +7706,31 @@ html {
 }
 .about .about__content .content {
   font-weight: 300;
-  max-width: 570px;
+  width: 570px;
+  margin-bottom: 32px;
 }
 .about .about__content .content h5 {
   font-size: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
 .about .about__content .content p {
   font-size: 14px;
+  line-height: 24px;
+}
+.about .about__content .btn__see__more {
+  out-line: none;
+  border: none;
+  padding: 14px 60px;
+  border: 0 solid #404040;
+  background-color: #404040;
+  color: #dab279;
+  border-radius: 50px;
 }
 .about .about__image {
+  width: 45.57%;
   max-width: 875px;
-  height: 620px;
+  height: 100%;
   background-size: cover;
-  background-position: right;
+  position: absolute;
+  right: 0;
 }
