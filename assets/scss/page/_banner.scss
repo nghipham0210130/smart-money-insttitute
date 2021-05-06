@@ -75,7 +75,6 @@
                   border: 1px solid $color-default-lightest;
                 }
               }
-
               &.slick-active {
                 button::before{
                   background-color: $color-default-lightest;
@@ -105,20 +104,9 @@
 
   // Control position of buttons group
   .buttons {
-    display: inline-block;
     transform: translate(135px, -116px);
     @media #{$info-phone}{
       transform: translate(135px, -76px);
-    }
-
-    svg {
-      color: $orange-dark;
-      font-size: 14px;
-      transform: translateY(-2px);
-    }
-
-    .play {
-      display: none;
     }
   }
 }

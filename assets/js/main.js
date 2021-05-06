@@ -49,34 +49,57 @@ $(function() {
     $( window ).on("load resize",function() {
 
         var width = $(window).width();
-        var marginForElementSameContainer = (width - 1230)/2;
+        var marginForElementSameContainer = (width - 1170)/2;
         
         // Set margin for elements not in the container
         if(width > 1200) {
             $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", marginForElementSameContainer + "px" );
             //var marginLeftForButtons = marginForElementSameContainer + 135;
             $(".home").find( ".buttons" ).css( "margin-left", marginForElementSameContainer + "px" );
-            $(".about").find(".about__content").css( "margin-left", marginForElementSameContainer + "px" );
+            $(".about__content").css( "margin-left", marginForElementSameContainer + "px" );
             //$(".about__content.title").before.css( "left", -marginForElementSameContainer + "px" );
+            // Set margin right for content of Course and envent
+            $(".introduce__container__content").css( "margin-right", marginForElementSameContainer + "px" );
 
         }
         else {
             $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", "0" );
         }
+
+        // Set position for ul of course
+        var leftOfDotsIntroduce = width*0.5443 + 70;
+        $(".introduce__backgrounds.slick-dotted.slick-slider ul").css({"transform":"translate(" + leftOfDotsIntroduce + "px, -100px)"});
+        // Set position for play/pause course
+        var leftOfButtonsGroup = leftOfDotsIntroduce + 120;
+        $(".introduce .buttons").css({"transform": "translate(" + leftOfButtonsGroup + "px, -114px)"});
     });
 
-    // Action when click pause button
+    // Action when click pause button in home background
     $('.pause').on('click', function() {
-        $('.home__background').slick('slickPause');
-        $(".pause" ).css( "display", "none" );
-        $(".play" ).css( "display", "block" );
+        $('.home__background, .introduce__backgrounds').slick('slickPause');
+        $('.pause').css( "display", "none" );
+        $('.play').css( "display", "block" );
     });
 
-    // Action when click play button
+    // Action when click play button in home background
     $('.play').on('click', function() {
-        $('.home__background').slick('slickPlay');
-        $(".play" ).css( "display", "none" );
-        $(".pause" ).css( "display", "block" );
+        $('.home__background, .introduce__backgrounds').slick('slickPlay');
+        $('.play').css( "display", "none" );
+        $('.pause').css( "display", "block" );
+    });
+
+    // Action when click pause button in introduce background
+    $('.pause').on('click', function() {
+        $('.introduce__backgrounds').slick('slickPause');
+        $('.pause').css( "display", "none" );
+        $('.play').css( "display", "block" );
+    });
+
+    // Action when click play button in introduce background
+    $('.play').on('click', function() {
+        $('.introduce__backgrounds').slick('slickPlay');
+        $('.play').css( "display", "none" );
+        $('.pause').css( "display", "block" );
     });
 
 
@@ -114,7 +137,7 @@ $(function() {
         //End if
     });
 
-    $('.home__background').slick({
+    $('.home__background, .introduce__backgrounds').slick({
         dots: true,
         infinite: true,
         speed: 500,

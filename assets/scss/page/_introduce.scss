@@ -1,0 +1,91 @@
+.introduce {
+  .introduce__container {
+    width: 45.57%;
+    max-width: 875px;
+    height: 620px;
+    left: 54.43%;
+    z-index: 1;
+    position: absolute;
+    .introduce__container__content {
+      opacity: 1.0;
+      padding: 90px 15px 246px 0;
+      position: absolute;
+      left: 70px;
+      .title {
+        color: $color-default-lightest;
+          margin-bottom: 57px;
+          &::after {
+            left: 0;
+          }
+          &::before {
+            opacity: 0.8;
+            left: -70px;
+          }
+      }
+      .content {
+        color: $color-default-lightest;
+        margin-bottom: 30px;
+      }
+      .btn__buy__course {
+        padding: 14px 46px;
+        @include border-radius-custom-gradient(0, $grey-dark, $orange-dark, $orange-light, $color-default-lightest, 50px);
+      }
+    }
+  }
+  .introduce__backgrounds {
+    // Resolve slick dotted
+    &.slick-dotted {
+      &.slick-slider {
+        margin-bottom: 0;
+        ul{
+          text-align: left;
+          width: 200px;
+          z-index: 1;
+          &.slick-dots {
+            @media #{$info-phone}{
+              bottom: -40px;
+            }
+            li {
+              @media #{$info-phone}{
+                display: inline-block;
+              }
+              button{
+                width: 0;
+                height: 0;
+                &::before {
+                  border: 1px solid $color-default-lightest;
+                }
+              }
+              &.slick-active {
+                button::before{
+                  background-color: $color-default-lightest;
+                }
+                @media #{$info-phone}{
+                  button::before {
+                    background-color: $color-default-lightest;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      // Resolve background__item
+    }
+    .introduce__background__item {
+      background-size: cover ;
+      height: 620px;
+      position: relative;
+      @media #{$info-phone}{
+        height: 400px;
+      }
+    }
+  }
+  // Control position of buttons group
+  .buttons {
+    transform: translate(135px, -116px);
+    @media #{$info-phone}{
+      transform: translate(135px, -76px);
+    }
+  }
+}

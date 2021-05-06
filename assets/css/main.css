@@ -7496,7 +7496,7 @@ html {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1140px;
   margin: 0 auto;
   position: relative;
   padding-left: 15px;
@@ -7539,18 +7539,17 @@ html {
   margin: 0;
 }
 
-.title h4 {
+.title {
   font-size: 48px;
-  font-weight: 300;
-  color: #000;
+  font-weight: 400;
   margin-bottom: 60px;
 }
 @media only screen and (max-width : 767px) {
-  .title h4 {
+  .title {
     font-size: 36px;
   }
 }
-.title h4::after {
+.title::after {
   content: "";
   width: 170px;
   height: 4px;
@@ -7558,16 +7557,49 @@ html {
   position: absolute;
   top: 176px;
 }
+.title::before {
+  content: "";
+  width: 945px;
+  height: 4px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 176px;
+}
+
+.content h5 {
+  font-size: 24px;
+  margin-bottom: 27px;
+  font-weight: 400;
+}
+.content p {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
 
 .btn {
   text-align: center;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
+  outline: none;
+  border: none;
 }
 .btn:hover {
   cursor: pointer;
   opacity: 0.5;
+}
+
+.buttons {
+  display: inline-block;
+}
+.buttons svg {
+  color: #c9923b;
+  font-size: 14px;
+  transform: translateY(-2px);
+}
+.buttons .play {
+  display: none;
 }
 
 .home .container {
@@ -7670,21 +7702,12 @@ html {
   }
 }
 .home .buttons {
-  display: inline-block;
   transform: translate(135px, -116px);
 }
 @media only screen and (max-width : 767px) {
   .home .buttons {
     transform: translate(135px, -76px);
   }
-}
-.home .buttons svg {
-  color: #c9923b;
-  font-size: 14px;
-  transform: translateY(-2px);
-}
-.home .buttons .play {
-  display: none;
 }
 
 .about {
@@ -7696,30 +7719,14 @@ html {
   padding: 90px 0 100px 15px;
   position: relative;
 }
-.about .about__content.title::before {
-  content: "";
-  width: 945px;
-  height: 4px;
-  background-color: #e5e5e5;
-  position: absolute;
-  top: 176px;
+.about .about__content.title::after {
+  left: 15px;
 }
 .about .about__content .content {
-  font-weight: 300;
-  width: 570px;
+  width: 520px;
   margin-bottom: 32px;
 }
-.about .about__content .content h5 {
-  font-size: 24px;
-  margin-bottom: 27px;
-}
-.about .about__content .content p {
-  font-size: 14px;
-  line-height: 24px;
-}
 .about .about__content .btn__see__more {
-  out-line: none;
-  border: none;
   padding: 14px 60px;
   border: 0 solid #404040;
   background-color: #404040;
@@ -7733,4 +7740,93 @@ html {
   background-size: cover;
   position: absolute;
   right: 0;
+}
+
+.introduce .introduce__container {
+  width: 45.57%;
+  max-width: 875px;
+  height: 620px;
+  left: 54.43%;
+  z-index: 1;
+  position: absolute;
+}
+.introduce .introduce__container .introduce__container__content {
+  opacity: 1;
+  padding: 90px 15px 246px 0;
+  position: absolute;
+  left: 70px;
+}
+.introduce .introduce__container .introduce__container__content .title {
+  color: #fff;
+  margin-bottom: 57px;
+}
+.introduce .introduce__container .introduce__container__content .title::after {
+  left: 0;
+}
+.introduce .introduce__container .introduce__container__content .title::before {
+  opacity: 0.8;
+  left: -70px;
+}
+.introduce .introduce__container .introduce__container__content .content {
+  color: #fff;
+  margin-bottom: 30px;
+}
+.introduce .introduce__container .introduce__container__content .btn__buy__course {
+  padding: 14px 46px;
+  border: 0 solid #404040;
+  background-color: #c9923b;
+  background-image: linear-gradient(to right, #c9923b, #dab279);
+  color: #fff;
+  border-radius: 50px;
+}
+.introduce .introduce__backgrounds.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+.introduce .introduce__backgrounds.slick-dotted.slick-slider ul {
+  text-align: left;
+  width: 200px;
+  z-index: 1;
+}
+@media only screen and (max-width : 767px) {
+  .introduce .introduce__backgrounds.slick-dotted.slick-slider ul.slick-dots {
+    bottom: -40px;
+  }
+}
+@media only screen and (max-width : 767px) {
+  .introduce .introduce__backgrounds.slick-dotted.slick-slider ul.slick-dots li {
+    display: inline-block;
+  }
+}
+.introduce .introduce__backgrounds.slick-dotted.slick-slider ul.slick-dots li button {
+  width: 0;
+  height: 0;
+}
+.introduce .introduce__backgrounds.slick-dotted.slick-slider ul.slick-dots li button::before {
+  border: 1px solid #fff;
+}
+.introduce .introduce__backgrounds.slick-dotted.slick-slider ul.slick-dots li.slick-active button::before {
+  background-color: #fff;
+}
+@media only screen and (max-width : 767px) {
+  .introduce .introduce__backgrounds.slick-dotted.slick-slider ul.slick-dots li.slick-active button::before {
+    background-color: #fff;
+  }
+}
+.introduce .introduce__backgrounds .introduce__background__item {
+  background-size: cover;
+  height: 620px;
+  position: relative;
+}
+@media only screen and (max-width : 767px) {
+  .introduce .introduce__backgrounds .introduce__background__item {
+    height: 400px;
+  }
+}
+.introduce .buttons {
+  transform: translate(135px, -116px);
+}
+@media only screen and (max-width : 767px) {
+  .introduce .buttons {
+    transform: translate(135px, -76px);
+  }
 }

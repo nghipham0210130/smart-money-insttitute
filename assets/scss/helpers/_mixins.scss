@@ -527,6 +527,15 @@
   border-radius: $radius;
 }
 
+//  draw box radius with gradient
+@mixin border-radius-custom-gradient ($thickness, $color-border, $color-background-start, $color-background-end, $color-text, $radius) {
+  border: $thickness solid $color-border;
+  background-color: $color-background-start;
+  background-image: linear-gradient(to right, $color-background-start, $color-background-end);
+  color: $color-text;
+  border-radius: $radius;
+}
+
 // draw line linear gradient
 @mixin line-multi-color($width, $thickness, $color-start, $color-end) {
   content: "";
