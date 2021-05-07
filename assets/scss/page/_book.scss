@@ -17,9 +17,10 @@
             column-gap: 30px;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             .book__card {
+                background-color: $color-default-lightest;
                 position: relative;
                 height: 345px;
-                box-shadow: -25px 45px 80px $color-border-button-grey;
+                box-shadow: -25px 5px 80px $color-border-button-grey;
                 border-radius: 5px;
                 .book__image {
                     position: absolute;

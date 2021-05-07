@@ -7424,6 +7424,9 @@ img {
 .navbar .container .inner__collapse a:not(:first-child) {
   margin-left: 20px;
 }
+.navbar .container .inner__collapse a:hover, .navbar .container .inner__collapse a.active {
+  opacity: 1;
+}
 .navbar .container .inner__collapse a:hover::after, .navbar .container .inner__collapse a.active::after {
   content: "";
   width: 100%;
@@ -7432,7 +7435,6 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
-  opacity: 1;
 }
 @media only screen and (max-width : 900px) {
   .navbar .container .inner__collapse a:hover::after, .navbar .container .inner__collapse a.active::after {
@@ -7859,9 +7861,10 @@ html {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .book.container .grid .book__card {
+  background-color: #fff;
   position: relative;
   height: 345px;
-  box-shadow: -25px 45px 80px #e1e1e1;
+  box-shadow: -25px 5px 80px #e1e1e1;
   border-radius: 5px;
 }
 .book.container .grid .book__card .book__image {
@@ -7906,6 +7909,141 @@ html {
   color: #fff;
 }
 .book.container .grid .book__card .book__flag__new {
+  text-align: center;
+  line-height: 36px;
+  color: #fff;
+  font-weight: 400;
+  border-bottom: 36px solid #c9923b;
+  border-left: 36px solid transparent;
+  border-right: 36px solid transparent;
+  height: 0;
+  width: 78px;
+  box-shadow: 0 2px #d4d4d4;
+  transform: rotateZ(45deg);
+  position: absolute;
+  right: -35px;
+  top: 22px;
+}
+
+.online {
+  background-color: #404040;
+  width: 100%;
+  height: 200px;
+}
+.online .container .nav__grid {
+  display: grid;
+  grid-template-columns: 285px 300px 285px 300px;
+  text-align: center;
+}
+.online .container .nav__grid a {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+}
+.online .container .nav__grid a img {
+  margin-bottom: 11px;
+}
+.online .container .nav__grid a p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 100%;
+}
+.online .container .nav__grid a:hover, .online .container .nav__grid a.active {
+  background-color: #151515;
+  opacity: 1;
+}
+.online .container .nav__grid a:hover::after, .online .container .nav__grid a.active::after {
+  content: "";
+  width: 100%;
+  height: 10px;
+  background-image: linear-gradient(to right, #c9923b, #dab279);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.online .container .nav__grid a:hover::before, .online .container .nav__grid a.active::before {
+  width: 0;
+  height: 0;
+  border-bottom: 42px solid red;
+  border-left: 21px solid transparent;
+  border-right: 21px solid transparent;
+  bottom: 0;
+}
+.online .container .title {
+  padding-top: 60px;
+  margin-bottom: 56px;
+}
+.online .container .title::before {
+  content: "";
+  width: calc(100% - 30px);
+  height: 4px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 340px;
+}
+.online .container .title::after {
+  content: "";
+  width: 170px;
+  height: 4px;
+  background-color: #c9923b;
+  position: absolute;
+  left: 15px;
+  top: 340px;
+}
+.online .container .course__grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 345px 345px;
+}
+.online .container .course__grid .course__card {
+  background-color: #fff;
+  position: relative;
+  box-shadow: -25px 5px 80px #e1e1e1;
+  border-radius: 5px;
+}
+.online .container .course__grid .course__card .course__image {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.online .container .course__grid .course__card .course__image.none__white {
+  top: 32px;
+}
+.online .container .course__grid .course__card .course__image.have__white {
+  top: 6px;
+}
+.online .container .course__grid .course__card .course__header {
+  position: absolute;
+  bottom: 45px;
+  left: 20px;
+  font-size: 14px;
+}
+.online .container .course__grid .course__card .course__header .course__title {
+  font-weight: 400;
+}
+.online .container .course__grid .course__card .course__header .course__price {
+  font-weight: 300;
+  color: #c9923b;
+}
+.online .container .course__grid .course__card .btn.btn__buy__course {
+  position: absolute;
+  bottom: 0%;
+  right: 20px;
+  transform: translateY(50%);
+  font-size: 10px;
+  padding: 9px 13px;
+  border: 1px solid #e1e1e1;
+  background-color: #ebebeb;
+  color: #000;
+  border-radius: 50px;
+}
+.online .container .course__grid .course__card .btn:hover {
+  opacity: 1;
+  background-color: #c9923b;
+  color: #fff;
+}
+.online .container .course__grid .course__card .course__flag__new {
   text-align: center;
   line-height: 36px;
   color: #fff;
