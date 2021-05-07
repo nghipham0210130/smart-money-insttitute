@@ -7496,7 +7496,7 @@ html {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1170px;
   margin: 0 auto;
   position: relative;
   padding-left: 15px;
@@ -7829,4 +7829,95 @@ html {
   .introduce .buttons {
     transform: translate(135px, -76px);
   }
+}
+
+.book.container {
+  padding-top: 90px;
+  padding-bottom: 160px;
+}
+.book.container .title {
+  margin-bottom: 56px;
+}
+.book.container .title::before {
+  content: "";
+  width: calc(100% - 30px);
+  height: 4px;
+  background-color: #e5e5e5;
+  position: absolute;
+}
+.book.container .title::after {
+  content: "";
+  width: 170px;
+  height: 4px;
+  background-color: #c9923b;
+  position: absolute;
+  left: 15px;
+}
+.book.container .grid {
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.book.container .grid .book__card {
+  position: relative;
+  height: 345px;
+  box-shadow: -25px 45px 80px #e1e1e1;
+  border-radius: 5px;
+}
+.book.container .grid .book__card .book__image {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.book.container .grid .book__card .book__image.none__white {
+  top: 32px;
+}
+.book.container .grid .book__card .book__image.have__white {
+  top: 6px;
+}
+.book.container .grid .book__card .book__header {
+  position: absolute;
+  bottom: 45px;
+  left: 20px;
+  font-size: 14px;
+}
+.book.container .grid .book__card .book__header .book__title {
+  font-weight: 400;
+}
+.book.container .grid .book__card .book__header .book__price {
+  font-weight: 300;
+  color: #c9923b;
+}
+.book.container .grid .book__card .btn.btn__buy__book {
+  position: absolute;
+  bottom: 0%;
+  right: 20px;
+  transform: translateY(50%);
+  font-size: 10px;
+  padding: 9px 13px;
+  border: 1px solid #e1e1e1;
+  background-color: #ebebeb;
+  color: #000;
+  border-radius: 50px;
+}
+.book.container .grid .book__card .btn:hover {
+  opacity: 1;
+  background-color: #c9923b;
+  color: #fff;
+}
+.book.container .grid .book__card .book__flag__new {
+  text-align: center;
+  line-height: 36px;
+  color: #fff;
+  font-weight: 400;
+  border-bottom: 36px solid #c9923b;
+  border-left: 36px solid transparent;
+  border-right: 36px solid transparent;
+  height: 0;
+  width: 78px;
+  box-shadow: 0 2px #d4d4d4;
+  transform: rotateZ(45deg);
+  position: absolute;
+  right: -35px;
+  top: 22px;
 }

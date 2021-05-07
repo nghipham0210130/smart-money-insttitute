@@ -1,24 +1,81 @@
 .book {
     &.container {
         padding-top: 90px;
+        padding-bottom: 160px;
         .title {
-            margin-bottom: 45px;
+            margin-bottom: 56px;
             &::before {
-                @include line-simple-color(100%, 4px, $color-line-grey);
+                @include line-simple-color(calc(100% - 30px), 4px, $color-line-grey);
+            }
+            &::after {
+                @include line-simple-color(170px, 4px, $orange-dark);
+                left: 15px;
             }
         }
         .grid {
             display: grid;
-            gap: 30px;
+            column-gap: 30px;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             .book__card {
                 position: relative;
-                height: 300px;
-                box-shadow: -25px 45px 45px $grey-light;
-                img {
+                height: 345px;
+                box-shadow: -25px 45px 80px $color-border-button-grey;
+                border-radius: 5px;
+                .book__image {
                     position: absolute;
                     left: 50%;
-                    transform: translate(36px, -50%);
+                    transform: translateX(-50%);
+                    &.none__white {
+                        top: 32px;
+                    }
+                    &.have__white {
+                        top: 6px;
+                    }
+                }
+                .book__header {
+                    position: absolute;
+                    bottom: 45px;
+                    left: 20px;
+                    font-size: 14px;
+                    .book__title {
+                        font-weight: 400;
+                    }
+                    .book__price {
+                        font-weight: 300;
+                        color: $orange-dark;
+                    }
+                }
+                .btn {
+                    &.btn__buy__book {
+                        position: absolute;
+                        bottom: 0%;
+                        right: 20px;
+                        transform: translateY(50%);
+                        font-size: 10px;
+                        padding: 9px 13px;
+                        @include border-radius-custom(1px, $color-border-button-grey, $grey-medium, $color-default-darkest, 50px);
+                    }
+                    &:hover {
+                        opacity: 1;
+                        background-color: $orange-dark;
+                        color: $color-default-lightest;
+                    }
+                }
+                .book__flag__new {
+                    text-align: center;
+                    line-height: 36px;
+                    color: $color-default-lightest;
+                    font-weight: 400;
+                    border-bottom: 36px solid $orange-dark;
+                    border-left: 36px solid transparent;
+                    border-right: 36px solid transparent;
+                    height: 0;
+                    width: 78px;
+                    box-shadow: 0 2px $color-box-shadow;
+                    transform: rotateZ(45deg);
+                    position: absolute;
+                    right: -35px;
+                    top: 22px;
                 }
             }
         }
