@@ -7766,38 +7766,43 @@ html {
 }
 
 .title {
-  font-size: 48px;
-  font-weight: 400;
+  position: relative;
+}
+
+.title h2 {
   margin-bottom: 60px;
+  font-weight: 300;
+  font-size: 48px;
 }
 
 @media only screen and (max-width: 767px) {
-  .title {
+  .title h2 {
     font-size: 36px;
   }
 }
 
-.title::after {
+.title h2::after {
   content: "";
   width: 170px;
   height: 4px;
   background-color: #c9923b;
   position: absolute;
-  top: 176px;
+  top: 86px;
+  left: 0;
 }
 
-.title::before {
+.title h2::before {
   content: "";
-  width: 945px;
+  width: 100%;
   height: 4px;
   background-color: #e5e5e5;
   position: absolute;
-  top: 176px;
+  top: 86px;
 }
 
 .content h5 {
   font-size: 24px;
-  margin-bottom: 27px;
+  margin-bottom: 17px;
   font-weight: 400;
 }
 
@@ -7859,19 +7864,19 @@ html {
   color: #fff;
 }
 
-.home .container .home__content {
+.home .container .home__content h1 {
   width: 600px;
   top: 316px;
   font-size: 60px;
   position: absolute;
 }
 
-.home .container .home__content p {
+.home .container .home__content h1 p {
   font-weight: 300;
 }
 
 @media only screen and (max-width: 767px) {
-  .home .container .home__content {
+  .home .container .home__content h1 {
     width: 300px;
     top: 200px;
     font-size: 46px;
@@ -7981,17 +7986,15 @@ html {
 }
 
 .about {
-  display: flex;
-  flex-direction: row;
-  position: relative;
+  display: grid;
+  column-gap: 100px;
 }
 
 .about .about__content {
   padding: 90px 0 100px 15px;
-  position: relative;
 }
 
-.about .about__content.title::after {
+.about .about__content.title h2::after {
   left: 15px;
 }
 
@@ -8009,19 +8012,13 @@ html {
 }
 
 .about .about__image {
-  width: 45.57%;
-  max-width: 875px;
-  height: 100%;
+  max-width: 1170px;
+  height: 620px;
   background-size: cover;
-  position: absolute;
-  right: 0;
 }
 
 .introduce .introduce__container {
-  width: 45.57%;
-  max-width: 875px;
   height: 620px;
-  left: 54.43%;
   z-index: 1;
   position: absolute;
 }
@@ -8035,14 +8032,14 @@ html {
 
 .introduce .introduce__container .introduce__container__content .title {
   color: #fff;
-  margin-bottom: 57px;
+  margin-bottom: 56px;
 }
 
-.introduce .introduce__container .introduce__container__content .title::after {
+.introduce .introduce__container .introduce__container__content .title h2::after {
   left: 0;
 }
 
-.introduce .introduce__container .introduce__container__content .title::before {
+.introduce .introduce__container .introduce__container__content .title h2::before {
   opacity: 0.8;
   left: -70px;
 }
@@ -8133,7 +8130,7 @@ html {
   margin-bottom: 56px;
 }
 
-.book.container .title::before {
+.book.container .title h2::before {
   content: "";
   width: calc(100% - 30px);
   height: 4px;
@@ -8141,7 +8138,7 @@ html {
   position: absolute;
 }
 
-.book.container .title::after {
+.book.container .title h2::after {
   content: "";
   width: 170px;
   height: 4px;
@@ -8242,23 +8239,21 @@ html {
   margin-bottom: 56px;
 }
 
-.online .container .online__title .title::before {
+.online .container .online__title .title h2::before {
   content: "";
   width: calc(100% - 30px);
   height: 4px;
   background-color: #e5e5e5;
   position: absolute;
-  top: 340px;
 }
 
-.online .container .online__title .title::after {
+.online .container .online__title .title h2::after {
   content: "";
   width: 170px;
   height: 4px;
   background-color: #c9923b;
   position: absolute;
   left: 15px;
-  top: 340px;
 }
 
 .online .container .online__title .suggest__course {
@@ -8409,6 +8404,7 @@ html {
 }
 
 .event .event__banner .event__banner__content {
+  padding-left: 15px;
   position: absolute;
   top: 356px;
 }
@@ -8428,6 +8424,7 @@ html {
 }
 
 .event .event__banner .btn__sign__up__join {
+  padding-left: 15px;
   position: absolute;
   bottom: 73px;
   border: 0 solid #404040;
@@ -8450,15 +8447,13 @@ html {
   margin-bottom: 60px;
 }
 
-.event .event__info .event__info__title.title::after {
+.event .event__info .event__info__title.title h2::after {
   left: 0;
-  top: 169px;
 }
 
-.event .event__info .event__info__title.title::before {
+.event .event__info .event__info__title.title h2::before {
   left: -70px;
-  top: 169px;
-  width: calc(100% + 55px);
+  width: calc(100% + 70px);
 }
 
 .event .event__info .event__info__grid .grid__item {

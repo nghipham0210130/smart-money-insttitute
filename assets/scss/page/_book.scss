@@ -4,10 +4,10 @@
         padding-bottom: 160px;
         .title {
             margin-bottom: 56px;
-            &::before {
+            h2::before {
                 @include line-simple-color(calc(100% - 30px), 4px, $color-line-grey);
             }
-            &::after {
+            h2::after {
                 @include line-simple-color(170px, 4px, $orange-dark);
                 left: 15px;
             }

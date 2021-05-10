@@ -5,7 +5,8 @@
     z-index: 1;
     color: $color-default-lightest;
     .home__content {
-      width: 600px;
+      h1 {
+        width: 600px;
       top: 316px;
       font-size: 60px;
       position: absolute;
@@ -18,6 +19,7 @@
         font-size: 46px;
       }
     }
+  }
 
     // Resolve toBottom button
     .home__toBottom {

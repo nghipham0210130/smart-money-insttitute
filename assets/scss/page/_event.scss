@@ -9,6 +9,7 @@
     height: 621px;
     position: relative;
     .event__banner__content {
+      padding-left: 15px;
       position: absolute;
       top: 356px;
       p {
@@ -25,6 +26,7 @@
       }
     }
     .btn__sign__up__join {
+      padding-left: 15px;
       position: absolute;
       bottom: 73px;
       @include border-radius-custom-gradient(0, $grey-dark, $orange-dark, $orange-light, $color-default-lightest, 50px);
@@ -42,14 +44,12 @@
     .event__info__title {
       &.title {
         margin-bottom: 60px;;
-        &::after {
+        h2::after {
           left: 0;
-          top: 169px;
         }
-        &::before {
+        h2::before {
           left: -70px;
-          top: 169px;
-          width: calc(100% + 55px);
+          width: calc(100% + 70px);
         }
       }
     }

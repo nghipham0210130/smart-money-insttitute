@@ -1,13 +1,10 @@
 .about {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-
+  display: grid;
+  column-gap: 100px;
   .about__content {
     padding: 90px 0 100px 15px;
-    position: relative;
     &.title {
-      &::after {
+      h2::after {
         left: 15px;
       }
 
@@ -22,11 +19,8 @@
     }
   }
   .about__image {
-    width: 45.57%;
-    max-width: 875px;
-    height: 100%;
-    background-size: cover;
-    position: absolute;
-    right: 0;
+      max-width: 1170px;
+      height: 620px;
+      background-size: cover;
   }
 }
