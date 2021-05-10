@@ -54,13 +54,15 @@ $(function() {
         // Set margin for elements not in the container
         if(width > 1200) {
             $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", marginForElementSameContainer + "px" );
-            //var marginLeftForButtons = marginForElementSameContainer + 135;
             $(".home").find( ".buttons" ).css( "margin-left", marginForElementSameContainer + "px" );
             $(".about__content").css( "margin-left", marginForElementSameContainer + "px" );
             //$(".about__content.title").before.css( "left", -marginForElementSameContainer + "px" );
-            // Set margin right for content of Course and envent
-            $(".introduce__container__content").css( "margin-right", marginForElementSameContainer + "px" );
-
+            // Set margin right for content of Course and event__info
+            $(".introduce__container__content, .event__info").css( "margin-right", marginForElementSameContainer + "px" );
+            // Set scale of two event element relative to screen
+            $(".event").css( "grid-template-columns", 500 + marginForElementSameContainer + "px " +  600 + marginForElementSameContainer + "px" );
+            // Set margin left for element of event__banner
+            $(".event__banner__content, .btn__sign__up__join").css( "margin-left", marginForElementSameContainer + "px" );
         }
         else {
             $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", "0" );

@@ -8081,8 +8081,52 @@ html {
 }
 
 .event {
-  background-color: yellow;
-  position: position;
+  display: grid;
+  column-gap: 70px;
+}
+.event .event__banner {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 620px;
+  position: relative;
+}
+.event .event__banner .event__banner__content {
+  position: absolute;
+  top: 356px;
+}
+.event .event__banner .event__banner__content p {
+  color: #dab279;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.event .event__banner .event__banner__content h3 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 32px;
+}
+.event .event__banner .btn__sign__up__join {
+  position: absolute;
+  bottom: 73px;
+  border: 0 solid #404040;
+  background-color: #c9923b;
+  background-image: linear-gradient(to right, #c9923b, #dab279);
+  color: #fff;
+  border-radius: 50px;
+  padding: 20px;
+}
+.event .event__info {
+  padding-top: 90px;
+  position: relative;
+  padding-right: 15px;
+  max-width: 600px;
+}
+.event .event__info .title::after {
+  left: 0;
+}
+.event .event__info .title::before {
+  left: -70px;
 }
 
 .nav__online {
