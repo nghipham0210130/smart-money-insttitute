@@ -51,9 +51,9 @@
   .home__background {
     position: relative;
     // Resolve slick dotted
-    &.slick-dotted {
-      &.slick-slider {
-        margin-bottom: 0;
+    &.slick-slider {
+      margin-bottom: 0;
+      &.slick-dotted {
         ul{
           transform: translate(0, -102px);
           text-align: left;

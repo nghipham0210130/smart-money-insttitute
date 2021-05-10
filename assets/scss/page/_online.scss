@@ -1,6 +1,7 @@
 .online {
   padding-top: 60px;
   padding-bottom: 110px;
+  background-color: $color-background-calendar;
   .container {
     .online__title {
       display: flex;
@@ -54,7 +55,7 @@
       .course__card {
         background-color: $color-default-lightest;
         position: relative;
-        box-shadow: -25px 5px 80px $color-border-button-grey;
+        box-shadow: -25px 45px 150px $color-border-button-grey;
         border-radius: 5px;
         .course__image {
           position: absolute;
@@ -115,14 +116,16 @@
       }
     }
     .online__footer {
-      a {
+      position: inherit;
+      a {    
+        float: right;
         &::before {
           content: "";
-          width: calc(100% - 135px);
+          width: calc(100% - 130px);
           border: 1px solid $grey-medium;
           position: absolute;
-          left: 15px;
-          margin-top: 5px;
+          margin-top: 7px;
+          left: 0;
         }
       }
     }
