@@ -170,49 +170,56 @@
         <!--  Section Online Start -->
         <section class="online">
             <div class="container">
-
                 <!--  Grid Option Course Start -->
-                <div class="nav__grid">
-                    <a href="#" class="online__link course">
+                <div class="online__grid">
+                    <a href="#course" class="online__link">
                         <img src="assets/img/_online/course_icon.png" alt="Course" class="online__icon">
                         <p>Khoá học</p>
+                        <div class="arrow__icon"></div>
                     </a>
-                    <a href="#" class="online__link videos active">
+                    <a href="#videos" class="online__link online__link__active">
                         <img src="assets/img/_online/video_icon.png" alt="Videos" class="online__icon">
                         <p>Videos</p>
+                        <div class="arrow__icon"></div>
                     </a>
-                    <a href="#" class="online__link audios">
+                    <a href="#audios" class="online__link">
                         <img src="assets/img/_online/audios_icon.png" alt="Audios" class="online__icon">
                         <p>Audios</p>
+                        <div class="arrow__icon"></div>
                     </a>
-                    <a href="#" class="online__link ebook">
+                    <a href="#ebook" class="online__link">
                         <img src="assets/img/_online/ebook_icon.png" alt="Ebook" class="online__icon">
                         <p>Ebook</p>
+                        <div class="arrow__icon"></div>
                     </a>
                 </div> <!--  Grid Option Course End -->
 
-                <div class="suggest__course">
-                    <a href="" class="suggest__course__link">
-                        <i class="far fa-eye"></i>
-                        <p>Xem nhiều nhất</p>
-                    </a>
-                    <a href="" class="suggest__course__link">
-                        <i class="far fa-bookmark"></i>
-                        <p>Mới nhất</p>
-                    </a>
-                    <a href="" class="suggest__course__link">
-                        <i class="far fa-thumbs-up"></i>
-                        <p>Được quan tâm</p>
-                    </a>
-                    <a href="" class="suggest__course__link">
-
-                        <p>Miễn phí</p>
-                    </a>
-                </div>
-                <h4 class="title">Khoá học online</h4>
+                <!--Title of Online section start-->
+                <div class="online__title">
+                    <h4 class="title">Khoá học online</h4>
+                    <!-- Suggest view mode for User -->
+                    <div class="suggest__course">
+                        <a href="#suggest__most__view" class="suggest__course__link suggest__course__link__active">
+                            <i class="fas fa-eye"></i>
+                            <p>Xem nhiều nhất</p>
+                        </a>
+                        <a href="#suggest__newest" class="suggest__course__link">
+                            <i class="far fa-bookmark"></i>
+                            <p>Mới nhất</p>
+                        </a>
+                        <a href="#suggest__interest" class="suggest__course__link">
+                            <i class="far fa-thumbs-up"></i>
+                            <p>Được quan tâm</p>
+                        </a>
+                        <a href="#suggest__free" class="suggest__course__link">
+                            <i class="fab fa-apple"></i>
+                            <p>Miễn phí</p>
+                        </a>
+                    </div>
+                </div><!--Title of Online section end-->
 
                 <!--  Grid Course Online Start -->
-                <div class="course__grid">
+                <div class="online__course__grid">
                     <div class="course__card">
                         <img src="assets/img/_book/book_01.png" alt="" class="course__image none__white">
                         <div class="course__header">
@@ -282,6 +289,12 @@
                         <button class="btn btn__buy__course">Mua ngay</button>
                     </div>
                 </div> <!--  Grid Course Online End -->
+
+                <!--Footer of online section Start-->
+                <div class="online__footer transform__modal">
+                    <a href="#">Xem tất cả <span></span></a>
+
+                </div><!--Footer of online section End-->
             </div>
         </section> <!--  Section Online End -->
     </main>

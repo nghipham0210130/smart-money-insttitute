@@ -7604,6 +7604,25 @@ html {
   display: none;
 }
 
+.transform__modal a {
+  float: right;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: #000;
+}
+.transform__modal a span {
+  border: solid #dab279;
+  border-width: 0 2.5px 2.5px 0;
+  display: inline-block;
+  padding: 2.5px;
+  float: right;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-top: 2px;
+  margin-left: 6px;
+}
+
 .home .container {
   text-transform: uppercase;
   z-index: 1;
@@ -7930,29 +7949,43 @@ html {
   width: 100%;
   height: 200px;
 }
-.online .container .nav__grid {
+.online .container {
+  padding-bottom: 110px;
+}
+.online .container .online__grid {
   display: grid;
   grid-template-columns: 285px 300px 285px 300px;
   text-align: center;
 }
-.online .container .nav__grid a {
+.online .container .online__grid a {
   padding-top: 60px;
   padding-bottom: 60px;
   position: relative;
 }
-.online .container .nav__grid a img {
+.online .container .online__grid a img {
   margin-bottom: 11px;
 }
-.online .container .nav__grid a p {
+.online .container .online__grid a p {
   font-size: 24px;
   font-weight: 300;
   line-height: 100%;
 }
-.online .container .nav__grid a:hover, .online .container .nav__grid a.active {
+.online .container .online__grid a:hover, .online .container .online__grid a.online__link__active {
   background-color: #151515;
   opacity: 1;
 }
-.online .container .nav__grid a:hover::after, .online .container .nav__grid a.active::after {
+.online .container .online__grid a:hover .arrow__icon, .online .container .online__grid a.online__link__active .arrow__icon {
+  width: 0;
+  height: 0;
+  border-bottom: 21px solid #fff;
+  border-left: 21px solid transparent;
+  border-right: 21px solid transparent;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.online .container .online__grid a:hover::after, .online .container .online__grid a.online__link__active::after {
   content: "";
   width: 100%;
   height: 10px;
@@ -7961,19 +7994,13 @@ html {
   left: 0;
   top: 0;
 }
-.online .container .nav__grid a:hover::before, .online .container .nav__grid a.active::before {
-  width: 0;
-  height: 0;
-  border-bottom: 42px solid red;
-  border-left: 21px solid transparent;
-  border-right: 21px solid transparent;
-  bottom: 0;
-}
-.online .container .title {
+.online .container .online__title {
+  display: flex;
+  justify-content: space-between;
   padding-top: 60px;
   margin-bottom: 56px;
 }
-.online .container .title::before {
+.online .container .online__title .title::before {
   content: "";
   width: calc(100% - 30px);
   height: 4px;
@@ -7981,7 +8008,7 @@ html {
   position: absolute;
   top: 340px;
 }
-.online .container .title::after {
+.online .container .online__title .title::after {
   content: "";
   width: 170px;
   height: 4px;
@@ -7990,43 +8017,75 @@ html {
   left: 15px;
   top: 340px;
 }
-.online .container .course__grid {
+.online .container .online__title .suggest__course {
+  display: flex;
+  order: 5;
+  padding-top: 22px;
+}
+.online .container .online__title .suggest__course a {
+  height: 12px;
+  display: flex;
+  order: 2;
+  color: #898989;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 15px 13px;
+  line-heigh: 12px;
+}
+.online .container .online__title .suggest__course a svg {
+  height: 12px;
+  margin-right: 3px;
+}
+.online .container .online__title .suggest__course a p {
+  font-size: 12px;
+}
+.online .container .online__title .suggest__course a:hover, .online .container .online__title .suggest__course a.suggest__course__link__active {
+  opacity: 1;
+  color: #fff;
+  border: 0 solid #404040;
+  background-color: #c9923b;
+  background-image: linear-gradient(to right, #c9923b, #dab279);
+  color: #fff;
+  border-radius: 50px;
+}
+.online .container .online__course__grid {
   display: grid;
   gap: 30px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 345px 345px;
+  margin-bottom: 30px;
 }
-.online .container .course__grid .course__card {
+.online .container .online__course__grid .course__card {
   background-color: #fff;
   position: relative;
   box-shadow: -25px 5px 80px #e1e1e1;
   border-radius: 5px;
 }
-.online .container .course__grid .course__card .course__image {
+.online .container .online__course__grid .course__card .course__image {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
-.online .container .course__grid .course__card .course__image.none__white {
+.online .container .online__course__grid .course__card .course__image.none__white {
   top: 32px;
 }
-.online .container .course__grid .course__card .course__image.have__white {
+.online .container .online__course__grid .course__card .course__image.have__white {
   top: 6px;
 }
-.online .container .course__grid .course__card .course__header {
+.online .container .online__course__grid .course__card .course__header {
   position: absolute;
   bottom: 45px;
   left: 20px;
   font-size: 14px;
 }
-.online .container .course__grid .course__card .course__header .course__title {
+.online .container .online__course__grid .course__card .course__header .course__title {
   font-weight: 400;
 }
-.online .container .course__grid .course__card .course__header .course__price {
+.online .container .online__course__grid .course__card .course__header .course__price {
   font-weight: 300;
   color: #c9923b;
 }
-.online .container .course__grid .course__card .btn.btn__buy__course {
+.online .container .online__course__grid .course__card .btn.btn__buy__course {
   position: absolute;
   bottom: 0%;
   right: 20px;
@@ -8038,12 +8097,12 @@ html {
   color: #000;
   border-radius: 50px;
 }
-.online .container .course__grid .course__card .btn:hover {
+.online .container .online__course__grid .course__card .btn:hover {
   opacity: 1;
   background-color: #c9923b;
   color: #fff;
 }
-.online .container .course__grid .course__card .course__flag__new {
+.online .container .online__course__grid .course__card .course__flag__new {
   text-align: center;
   line-height: 36px;
   color: #fff;
@@ -8058,4 +8117,12 @@ html {
   position: absolute;
   right: -35px;
   top: 22px;
+}
+.online .container .online__footer a::before {
+  content: "";
+  width: calc(100% - 135px);
+  border: 1px solid #ebebeb;
+  position: absolute;
+  left: 15px;
+  margin-top: 5px;
 }
