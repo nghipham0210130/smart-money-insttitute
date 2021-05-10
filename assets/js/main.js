@@ -102,17 +102,17 @@ $(function() {
         $('.pause').css( "display", "block" );
     });
 
-    // Add active for online__link when clicked
-    $(".online__link").on('click', function(event) {
+    // Add active for nav__online__link when clicked
+    $(".nav__online__link").on('click', function(event) {
 
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
             // Prevent default anchor click behavior
             event.preventDefault();
             $("a").each(function () {
-            $(this).removeClass('online__link__active');
+            $(this).removeClass('nav__online__link__active');
             });
-            $(this).addClass('online__link__active');
+            $(this).addClass('nav__online__link__active');
         } //End if
     });
 
