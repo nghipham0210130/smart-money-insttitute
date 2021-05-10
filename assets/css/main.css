@@ -8132,7 +8132,7 @@ html {
 
 .book.container .title h2::before {
   content: "";
-  width: calc(100% - 30px);
+  width: 100%;
   height: 4px;
   background-color: #e5e5e5;
   position: absolute;
@@ -8144,7 +8144,7 @@ html {
   height: 4px;
   background-color: #c9923b;
   position: absolute;
-  left: 15px;
+  left: 0;
 }
 
 .book.container .grid {
@@ -8604,4 +8604,84 @@ html {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.news.container {
+  padding-top: 90px;
+}
+
+.news.container .title {
+  margin-bottom: 56px;
+}
+
+.news.container .news__grid {
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.news.container .news__grid .news__grid__card .card__header {
+  height: 170px;
+}
+
+.news.container .news__grid .news__grid__card .card__body {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 51px;
+}
+
+.news.container .news__grid .news__grid__card .card__body .date {
+  height: 70px;
+  background-color: #f8f8f8;
+  margin-right: 16px;
+  position: relative;
+}
+
+.news.container .news__grid .news__grid__card .card__body .date p {
+  font-size: 24px;
+  font-weight: 300;
+  padding: 3px 16.7px;
+}
+
+.news.container .news__grid .news__grid__card .card__body .date .day {
+  color: #c9923b;
+}
+
+.news.container .news__grid .news__grid__card .card__body .date .day::after {
+  content: "";
+  width: 45px;
+  height: 1px;
+  background-color: #e1e1e1;
+  position: absolute;
+  left: 8px;
+  bottom: 35px;
+}
+
+.news.container .news__grid .news__grid__card .card__body .date .month {
+  color: #898989;
+}
+
+.news.container .news__grid .news__grid__card .card__body .description .description__time {
+  font-weight: 300;
+  font-size: 14px;
+  color: #898989;
+  margin-bottom: 14px;
+  padding-top: 4.5px;
+}
+
+.news.container .news__grid .news__grid__card .card__body .description h4 {
+  margin-bottom: 8px;
+}
+
+.news.container .news__grid .news__grid__card .card__body .description h4 .description__title {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.news.container .news__grid .news__grid__card .card__body .description .description__content {
+  color: #898989;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 9px;
 }
