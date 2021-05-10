@@ -1,9 +1,9 @@
 .event {
   display: grid;
   column-gap: 70px;
-  // Resolt event banner
+  // Resolve event banner
   .event__banner {
-    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     height: 620px;
     position: relative;
@@ -29,21 +29,45 @@
       @include border-radius-custom-gradient(0, $grey-dark, $orange-dark, $orange-light, $color-default-lightest, 50px);
       padding: 20px;
     }
-  } // End resolt
+  } // End resolve
 
+  // Resolve event information
   .event__info {
     padding-top: 90px;
     position: relative;
     padding-right: 15px;
     max-width: 600px;
-    .title {
-      &::after {
-        left: 0;
+    .event__info__title {
+      &.title {
+        &::after {
+          left: 0;
+        }
+        &::before {
+          left: -70px;
+        }
       }
-      &::before {
-        left: -70px;
+    }
+    .event__info__grid {
+      .grid__item {
+        display: flex;
+        flex-wrap: nowrap;
+        .date {
+          width: 60px;
+          height: 70px;
+          background-color: $color-background-calendar;
+          p {
+            font-size: 48px;
+            font-weight: 300;
+            .day {
+              color: $orange-dark;
+            }
+            .month {
+              color: $color-text-grey;
+            }
+          }
+         
+        }    
       }
     }
   }
-
 }
