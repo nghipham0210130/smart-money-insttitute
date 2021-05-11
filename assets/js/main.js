@@ -93,6 +93,9 @@ $(function() {
             $(".slick-prev").css( "left", distanceOfSlickArrow + "px" );
             $(".slick-next").css( "right", distanceOfSlickArrow + "px" );
 
+            // Set position for image footer
+            var distanceLeftOfFooterImage = marginForElementSameContainer + 334;
+            $(".footer__image").css("max-width", distanceLeftOfFooterImage + "px" );
         }
         else {
             $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", "0" );

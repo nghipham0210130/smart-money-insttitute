@@ -7626,6 +7626,107 @@ html {
   margin-left: 2px;
 }
 
+.footer {
+  position: relative;
+}
+.footer .footer__grid {
+  padding-top: 102px;
+}
+.footer .footer__grid.container {
+  display: grid;
+  column-gap: 30px;
+  row-gap: 1px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 182px 70px 24px;
+}
+.footer .footer__grid.container .footer__grid__item {
+  font-size: 14px;
+}
+.footer .footer__grid.container .footer__grid__item h4 {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 9px;
+}
+.footer .footer__grid.container .footer__grid__item p {
+  line-height: 24px;
+  font-weight: 300;
+  color: #898989;
+}
+.footer .footer__grid.container .contact {
+  grid-column: 2/3;
+}
+.footer .footer__grid.container .working__time {
+  grid-column: 3/4;
+  margin-left: 39px;
+}
+.footer .footer__grid.container .link {
+  grid-column: 2/4;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.footer .footer__grid.container .link h4 {
+  margin-bottom: 0;
+}
+.footer .footer__grid.container .link .link__social span:not(first-child) {
+  margin-left: 6px;
+}
+.footer .footer__grid.container .link .link__social .social__btn {
+  font-size: 12px;
+  line-height: 12px;
+}
+.footer .footer__grid.container .link .link__social .social__btn.btn {
+  text-transform: capitalize;
+}
+.footer .footer__grid.container .link .link__social .social__btn.social__btn--blue {
+  padding: 13px 32px 11px 32px;
+  border: 1px solid #4c6ea9;
+  background-color: #4c6ea9;
+  color: #fff;
+  border-radius: 20px;
+}
+.footer .footer__grid.container .link .link__social .social__btn.social__btn--red {
+  padding: 13px 34px 11px 34px;
+  border: 1px solid #dc3833;
+  background-color: #dc3833;
+  color: #fff;
+  border-radius: 20px;
+}
+.footer .footer__grid.container .link .link__social .social__btn.social__btn--orange {
+  padding: 13px 34px 11px 35px;
+  border: 1px solid #ff5838;
+  background-color: #ff5838;
+  color: #fff;
+  border-radius: 20px;
+}
+.footer .footer__grid.container .link::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #e1e1e1;
+  position: absolute;
+  top: -33px;
+}
+.footer .footer__grid.container .link::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #e1e1e1;
+  position: absolute;
+  top: 48px;
+}
+.footer .footer__grid.container .signature {
+  grid-column: 2/4;
+}
+.footer .footer__image {
+  position: absolute;
+  top: 31px;
+}
+.footer .footer__image img {
+  height: calc(100% - 31px);
+  min-width: 340px;
+}
+
 .home .container {
   text-transform: uppercase;
   z-index: 1;

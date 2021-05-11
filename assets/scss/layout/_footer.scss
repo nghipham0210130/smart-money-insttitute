@@ -1,0 +1,88 @@
+.footer {
+  position: relative;
+  .footer__grid {
+    padding-top: 102px;
+    &.container {
+      display: grid;
+      column-gap: 30px;
+      row-gap: 1px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 182px 70px 24px;
+      .footer__grid__item {
+        font-size: 14px;
+        h4 {
+          font-weight: 400;
+          font-size: 18px;
+          margin-bottom: 9px;
+        }
+        p {
+          line-height: 24px;
+          font-weight: 300;
+          color: $color-text-grey;
+        }
+      }
+      .contact {
+        grid-column: 2/3;
+      }
+      .working__time {
+        grid-column: 3/4;
+        margin-left: 39px;
+      }
+      .link {
+        grid-column: 2/4;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        h4 {
+          margin-bottom: 0;
+        }
+        .link__social {
+          span:not(first-child) {
+            margin-left: 6px;
+          }
+          .social__btn {
+            font-size: 12px;
+            line-height: 12px;
+
+            &.btn {
+              text-transform: capitalize;
+            }
+            &.social__btn--blue {
+              padding: 13px 32px 11px 32px;
+              @include border-radius-custom(1px, $color-background-facebook, $color-background-facebook, $color-default-lightest, 20px);
+            }
+            &.social__btn--red {
+              padding: 13px 34px 11px 34px;
+              @include border-radius-custom(1px, $color-background-youtube, $color-background-youtube, $color-default-lightest, 20px);
+            }
+            &.social__btn--orange {
+              padding: 13px 34px 11px 35px;
+              @include border-radius-custom(1px, $color-background-google, $color-background-google, $color-default-lightest, 20px);
+            }
+
+          }
+        }
+
+        &::before {
+          @include line-simple-color(100%, 1px, $color-border-button-grey);
+          top: -33px;
+        }
+        &::after {
+          @include line-simple-color(100%, 1px, $color-border-button-grey);
+          top: 48px;
+        }
+      }
+      .signature {
+        grid-column: 2/4;
+      }
+    }
+  }
+  .footer__image {
+    position: absolute;
+    top: 31px;
+    img {
+      height: calc(100% - 31px);
+      min-width: 340px;
+    }
+  }
+}
