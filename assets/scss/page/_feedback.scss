@@ -1,0 +1,165 @@
+.feedback {
+  .feedback__content {
+    color: $color-default-lightest;
+    z-index: 1;
+    padding-top: 90px;
+    padding-bottom: 153px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    .feedback__content__title {
+      margin-bottom: 65px;
+      &.title {
+      }
+    }
+    .feedback__content__body {
+      max-width: 770px;
+      h3 {
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 24px;
+        color: $color-start;
+      }
+      p {
+        font-weight: 400;
+      }
+      .feedback__text {
+        font-size: 15px;
+        margin-bottom: 24px;
+        line-height: 24px;
+      }
+      .feedback__signature {
+        .name {
+          font-size: 18px;
+          margin-bottom: 7px;
+        }
+        .position {
+          font-size: 14px;
+          color: $color-start;
+        }
+      }
+    }
+  }
+
+  .feedback__backgrounds {
+    position: relative;
+    // Resolve slick dotted
+    &.slick-slider {
+      margin-bottom: 0;
+      &.slick-dotted {
+        .slick-next {
+          right: 0;
+          padding: 20px;
+          @include border-radius-custom(1px, $color-start, $color-start, $color-start, 50%);
+          &::before {
+          content: '';
+          border: solid $color-default-lightest;
+          border-width: 0 1.5px 1.5px 0;
+          display: inline-block;
+          padding: 2px;
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+            position: absolute;
+            top: 16px;
+            left: 13px;
+          }
+          &::after {
+            content: '';
+            border: solid $color-default-lightest;
+            border-width: 0 1.5px 1.5px 0;
+            display: inline-block;
+            padding: 2px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            position: absolute;
+            top: 16px;
+            right: 18px;
+          }
+        }
+        .slick-prev {
+          left: 0;
+          padding: 20px;
+          z-index: 1;
+          @include border-radius-custom(1px, $color-default-lightest, $color-default-lightest, $color-default-lightest, 50%);
+          &::before {
+            content: '';
+            border: solid $color-start;
+            border-width: 0 1.5px 1.5px 0;
+            display: inline-block;
+            padding: 2px;
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+            position: absolute;
+            top: 16px;
+            left: 18px;
+          }
+          &::after {
+            content: '';
+            border: solid $color-start;
+            border-width: 0 1.5px 1.5px 0;
+            display: inline-block;
+            padding: 2px;
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+            position: absolute;
+            top: 16px;
+            right: 13px;
+          }
+        }
+        ul{
+          transform: translate(-50%, -100px);
+          left: 50%;
+          width: 200px;
+          padding-left: 15px;
+          padding-right: 15px;
+          &.slick-dots {
+            @media #{$info-phone}{
+              bottom: -40px;
+            }
+            li {
+              @media #{$info-phone}{
+                display: inline-block;
+              }
+              button{
+                width: 0;
+                height: 0;
+                &::before {
+                  border: 1px solid $color-start;
+                }
+              }
+              &.slick-active {
+                button::before{
+                  background-color: $color-start;
+                }
+                @media #{$info-phone}{
+                }
+              }
+            }
+          }
+        }
+      }
+      // Resolve background__item
+    }
+    .feedback__background__item {
+      background-size: cover ;
+      background-position: center;
+      height: 556px;
+      @media #{$info-phone}{
+        height: 700px;
+      }
+    } // End Resolve
+  }
+  // Control position of buttons group
+  .buttons {
+    svg {
+      color: $color-start;
+    }
+    img {
+      color: $color-start;
+    }
+    @media #{$info-phone}{
+      transform: translate(135px, -76px);
+    }
+  }
+}

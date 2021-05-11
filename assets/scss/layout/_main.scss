@@ -63,7 +63,7 @@ html {
   position: relative;
   h2 {
     margin-bottom: 60px;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 48px;
     @media #{$info-phone}{
       font-size: 36px;
@@ -111,7 +111,8 @@ html {
 
 // Control position of buttons group
 .buttons {
-  display: inline-block;
+  display: block;
+  height: 0;
   svg {
     color: $orange-dark;
     font-size: 14px;

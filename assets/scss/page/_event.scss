@@ -37,7 +37,7 @@
   // Resolve event information
   .event__info {
     padding-top: 90px;
-    padding-bottom: 12px;
+    padding-bottom: 6px;
     position: relative;
     padding-right: 14px;
     max-width: 600px;
@@ -100,15 +100,13 @@
           }
           h4 {
             margin-bottom: 8px;
-            .description__title {
-              font-size: 18px;
-              font-weight: 300;
-            }
+            font-size: 18px;
+            font-weight: 400;
           }
           .description__content {
             color: $color-text-grey;
             font-size: 14px;
-            font-weight: 300;;
+            font-weight: 400;
             line-height: 20px;
             margin-bottom: 9px;
           }

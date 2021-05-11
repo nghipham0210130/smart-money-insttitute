@@ -60,16 +60,39 @@ $(function() {
             // Set margin right for content of Course and event__info
             $(".introduce__container__content, .event__info").css( "margin-right", marginForElementSameContainer + "px" );
             // Set scale of two element relative to screen for about section
-            $(".about").css( "grid-template-columns", 570 + marginForElementSameContainer + "px " +  500 + marginForElementSameContainer + "px" );
+            var leftContainAbout = 570 + marginForElementSameContainer;
+            var rightContainAbout = 530 + marginForElementSameContainer;
+            $(".about").css( "grid-template-columns", leftContainAbout + "px " + rightContainAbout + "px" );
+
+            // Set max-width for about image
+            var maxWidthOfAboutImage = 530 + marginForElementSameContainer;
+            $(".about__image").css( "max-width", maxWidthOfAboutImage + "px" );
+
              // Set width for background cover introduce container
-            $(".introduce__container").css( "width", 530 + marginForElementSameContainer + "px" );
+            var widthOfIntroduceContainer = 530 + marginForElementSameContainer;
+            $(".introduce__container").css( "width", widthOfIntroduceContainer + "px" );
+
             // Set margin-left for background cover introduce container
-            $(".introduce__container").css( "margin-left", 670 + marginForElementSameContainer + "px" );
+            var marginLeftOfIntroduceContainer = 670 + marginForElementSameContainer;
+            $(".introduce__container").css( "margin-left", marginLeftOfIntroduceContainer + "px" );
+
             // Set scale of two event element relative to screen for event section
-            $(".event").css( "grid-template-columns", 500 + marginForElementSameContainer + "px " +  600 + marginForElementSameContainer + "px" );
+            var leftContainEvent = 500 + marginForElementSameContainer;
+            var rightContainEvent = 600 + marginForElementSameContainer;
+            $(".event").css( "grid-template-columns", leftContainEvent + "px " + rightContainEvent  + "px" );
+
             // Set width to back section
-            $(".event").css( "grid-template-columns", 500 + marginForElementSameContainer + "px " +  600 + marginForElementSameContainer + "px" );
-           
+            $(".event").css( "grid-template-columns", leftContainEvent + "px " +  rightContainEvent + "px" );
+
+            // Set position for buttons of feedback
+            var distanceLeftFeedbackButtons = marginForElementSameContainer + 660;
+            $(".feedback").find(".buttons").css( "transform", "translate(" + distanceLeftFeedbackButtons + "px, -114px)");
+
+            // Set position for slick-arrow
+            var distanceOfSlickArrow = marginForElementSameContainer + 5;
+            $(".slick-prev").css( "left", distanceOfSlickArrow + "px" );
+            $(".slick-next").css( "right", distanceOfSlickArrow + "px" );
+
         }
         else {
             $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", "0" );
@@ -179,7 +202,18 @@ $(function() {
         fade: true,
         arrows: false,
         cssEase: 'linear',
-        autoplay: true,
+        //autoplay: true,
+        autoplaySpeed: 2000
+    });
+
+    $('.feedback__backgrounds').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        arrows: true,
+        cssEase: 'linear',
+        //autoplay: true,
         autoplaySpeed: 2000
     });
 });

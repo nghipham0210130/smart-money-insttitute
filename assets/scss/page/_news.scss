@@ -45,15 +45,13 @@
                     .description {
                         h4 {
                             margin-bottom: 8px;
-                            .description__title {
+                            font-weight: 400;
                             font-size: 18px;
-                            font-weight: 300;
-                            }
                         }
                         .description__content {
                             color: $color-text-grey;
                             font-size: 14px;
-                            font-weight: 300;;
+                            font-weight: 400;
                             line-height: 20px;
                             margin-bottom: 5px;
                         }

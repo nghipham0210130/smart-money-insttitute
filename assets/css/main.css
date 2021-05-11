@@ -7546,7 +7546,7 @@ html {
 }
 .title h2 {
   margin-bottom: 60px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 48px;
 }
 @media only screen and (max-width : 767px) {
@@ -7597,7 +7597,8 @@ html {
 }
 
 .buttons {
-  display: inline-block;
+  display: block;
+  height: 0;
 }
 .buttons svg {
   color: #c9923b;
@@ -8120,7 +8121,7 @@ html {
 }
 .event .event__info {
   padding-top: 90px;
-  padding-bottom: 12px;
+  padding-bottom: 6px;
   position: relative;
   padding-right: 14px;
   max-width: 600px;
@@ -8189,15 +8190,13 @@ html {
 }
 .event .event__info .event__info__grid .grid__item .description h4 {
   margin-bottom: 8px;
-}
-.event .event__info .event__info__grid .grid__item .description h4 .description__title {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
 }
 .event .event__info .event__info__grid .grid__item .description .description__content {
   color: #898989;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 20px;
   margin-bottom: 9px;
 }
@@ -8316,15 +8315,13 @@ html {
 }
 .news .container .news__grid .news__grid__card .card__body .description h4 {
   margin-bottom: 8px;
-}
-.news .container .news__grid .news__grid__card .card__body .description h4 .description__title {
+  font-weight: 400;
   font-size: 18px;
-  font-weight: 300;
 }
 .news .container .news__grid .news__grid__card .card__body .description .description__content {
   color: #898989;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 20px;
   margin-bottom: 5px;
 }
@@ -8332,4 +8329,162 @@ html {
   font-size: 12px;
   font-weight: 900;
   color: #c9923b;
+}
+
+.feedback .feedback__content {
+  color: #fff;
+  z-index: 1;
+  padding-top: 90px;
+  padding-bottom: 153px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.feedback .feedback__content .feedback__content__title {
+  margin-bottom: 65px;
+}
+.feedback .feedback__content .feedback__content__body {
+  max-width: 770px;
+}
+.feedback .feedback__content .feedback__content__body h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  color: #dab279;
+}
+.feedback .feedback__content .feedback__content__body p {
+  font-weight: 400;
+}
+.feedback .feedback__content .feedback__content__body .feedback__text {
+  font-size: 15px;
+  margin-bottom: 24px;
+  line-height: 24px;
+}
+.feedback .feedback__content .feedback__content__body .feedback__signature .name {
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+.feedback .feedback__content .feedback__content__body .feedback__signature .position {
+  font-size: 14px;
+  color: #dab279;
+}
+.feedback .feedback__backgrounds {
+  position: relative;
+}
+.feedback .feedback__backgrounds.slick-slider {
+  margin-bottom: 0;
+}
+.feedback .feedback__backgrounds.slick-slider.slick-dotted .slick-next {
+  right: 0;
+  padding: 20px;
+  border: 1px solid #dab279;
+  background-color: #dab279;
+  color: #dab279;
+  border-radius: 50%;
+}
+.feedback .feedback__backgrounds.slick-slider.slick-dotted .slick-next::before {
+  content: "";
+  border: solid #fff;
+  border-width: 0 1.5px 1.5px 0;
+  display: inline-block;
+  padding: 2px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  position: absolute;
+  top: 16px;
+  left: 13px;
+}
+.feedback .feedback__backgrounds.slick-slider.slick-dotted .slick-next::after {
+  content: "";
+  border: solid #fff;
+  border-width: 0 1.5px 1.5px 0;
+  display: inline-block;
+  padding: 2px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  position: absolute;
+  top: 16px;
+  right: 18px;
+}
+.feedback .feedback__backgrounds.slick-slider.slick-dotted .slick-prev {
+  left: 0;
+  padding: 20px;
+  z-index: 1;
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #fff;
+  border-radius: 50%;
+}
+.feedback .feedback__backgrounds.slick-slider.slick-dotted .slick-prev::before {
+  content: "";
+  border: solid #dab279;
+  border-width: 0 1.5px 1.5px 0;
+  display: inline-block;
+  padding: 2px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  position: absolute;
+  top: 16px;
+  left: 18px;
+}
+.feedback .feedback__backgrounds.slick-slider.slick-dotted .slick-prev::after {
+  content: "";
+  border: solid #dab279;
+  border-width: 0 1.5px 1.5px 0;
+  display: inline-block;
+  padding: 2px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  position: absolute;
+  top: 16px;
+  right: 13px;
+}
+.feedback .feedback__backgrounds.slick-slider.slick-dotted ul {
+  transform: translate(-50%, -100px);
+  left: 50%;
+  width: 200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media only screen and (max-width : 767px) {
+  .feedback .feedback__backgrounds.slick-slider.slick-dotted ul.slick-dots {
+    bottom: -40px;
+  }
+}
+@media only screen and (max-width : 767px) {
+  .feedback .feedback__backgrounds.slick-slider.slick-dotted ul.slick-dots li {
+    display: inline-block;
+  }
+}
+.feedback .feedback__backgrounds.slick-slider.slick-dotted ul.slick-dots li button {
+  width: 0;
+  height: 0;
+}
+.feedback .feedback__backgrounds.slick-slider.slick-dotted ul.slick-dots li button::before {
+  border: 1px solid #dab279;
+}
+.feedback .feedback__backgrounds.slick-slider.slick-dotted ul.slick-dots li.slick-active button::before {
+  background-color: #dab279;
+}
+.feedback .feedback__backgrounds .feedback__background__item {
+  background-size: cover;
+  background-position: center;
+  height: 556px;
+}
+@media only screen and (max-width : 767px) {
+  .feedback .feedback__backgrounds .feedback__background__item {
+    height: 700px;
+  }
+}
+.feedback .buttons svg {
+  color: #dab279;
+}
+.feedback .buttons img {
+  color: #dab279;
+}
+@media only screen and (max-width : 767px) {
+  .feedback .buttons {
+    transform: translate(135px, -76px);
+  }
 }
