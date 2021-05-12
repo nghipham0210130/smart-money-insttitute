@@ -1,0 +1,141 @@
+.event {
+  display: grid;
+  column-gap: 70px;
+  border-bottom: 1px solid $color-border-button-grey;
+  // Resolve event banner
+  .event__banner {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 621px;
+    position: relative;
+    padding-left: 15px;
+    .event__banner__content {
+      position: absolute;
+      top: 356px;
+      p {
+        color: $orange-light;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+      h3 {
+        font-size: 24px;
+        font-weight: 400;
+        color: $color-default-lightest;
+        line-height: 32px;
+      }
+    }
+    .btn__sign__up__join {
+      position: absolute;
+      bottom: 73px;
+      @include border-radius-custom-gradient(0, $grey-dark, $orange-dark, $orange-light, $color-default-lightest, 50px);
+      padding: 20px;
+    }
+  } // End resolve
+
+  // Resolve event information
+  .event__info {
+    padding-top: 90px;
+    padding-bottom: 6px;
+    position: relative;
+    padding-right: 15px;
+    max-width: 600px;
+    &::before {
+      @include line-simple-color(calc(100% + 55px), 4px, $color-line-grey);
+      left: -70px;
+      top: 176px;
+    }
+    @media #{$info-tablet-vertical}{
+      padding-left: 15px;
+      &::before {
+        @include line-simple-color(100%, 4px, $color-line-grey);
+        left: 0;
+      }
+    }
+   
+    .event__info__title {
+      &.title {
+        margin-bottom: 60px;
+      }
+    }
+    .event__info__grid {
+      .grid__item {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 51px;
+        .date {
+          height: 70px;
+          background-color: $color-background-calendar;
+          margin-right: 16px;
+          position: relative;
+          p {
+            font-size: 24px;
+            font-weight: 300;
+            padding: 3px 16.7px;
+          }
+          .day {
+            color: $orange-dark;
+            &::after {
+              @include line-simple-color(45px, 1px, $color-border-button-grey);
+              left: 8px;
+              bottom: 35px;
+            }
+          }
+          .month {
+            color: $color-text-grey;
+          }
+        }  
+        .description {
+          .description__time {
+            font-weight: 300;
+            font-size: 14px;
+            color: $color-text-grey;
+            margin-bottom: 14px;
+            padding-top: 4.5px;
+            span {
+              font-weight: 700;
+              font-size: 12px;
+              text-transform: uppercase;
+              color: $color-default-lightest;
+              vertical-align: top;
+              margin-right: 10px;
+              padding: 4.45px 21px 5px 22px;
+              @include border-radius-custom-gradient(0, $grey-dark, $orange-dark, $orange-light, $color-default-lightest, 0);
+            }
+          }
+          h4 {
+            margin-bottom: 8px;
+            font-size: 18px;
+            font-weight: 400;
+          }
+          .description__content {
+            color: $color-text-grey;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            margin-bottom: 9px;
+          }
+          .description__sign__up__join {
+            &.transform__modal {
+              a {
+                span {
+                  margin-left: 0;
+                }
+                &::after {
+                  margin-top: 45px;
+                  left: 76px;
+                  
+                }
+              }
+            }
+          }
+        }  
+      }
+      br {
+        bottom: 232px;
+        @include line-simple-color(calc(100% - 15px), 1px, $grey-medium);
+      }
+    }
+  }
+}

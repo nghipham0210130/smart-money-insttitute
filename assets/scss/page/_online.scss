@@ -1,0 +1,142 @@
+.online {
+  padding-top: 60px;
+  padding-bottom: 110px;
+  background-color: $color-background-calendar;
+  .container {   
+    &::before {
+      @include line-simple-color(100%, 4px, $color-line-grey);
+      left: 0;
+      top: 86px;
+    }
+    .online__title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 56px;
+      @media #{$info-phone} {
+        display: block;
+      }
+      .suggest__course {
+        display: flex;
+        order: 5;
+        padding-top: 22px;
+        @media #{$info-phone} {
+          padding-top: 30px;
+          display: flex;
+          justify-content: space-between;
+        }
+        a {
+          height: 12px;
+          display: flex;
+          order: 2;
+          color: $color-text-grey;
+          text-transform: uppercase;
+          font-weight: 600;
+          padding: 15px 13px;
+          line-height: 12px;
+          @media #{$info-phone} {
+            padding: 12px 5px;
+          }
+          svg {
+            height: 12px;
+            margin-right: 3px;
+          }
+          p {
+            font-size: 12px;
+          }
+          &:hover, &.suggest__course__link__active {
+            opacity: 1;
+            color: $color-default-lightest;
+            @include border-radius-custom-gradient(0, $grey-dark, $orange-dark, $orange-light, $color-default-lightest, 50px);
+          }
+        }
+      }
+    }
+    .online__course__grid {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 345px 345px;
+      margin-bottom: 30px;
+      @media #{$info-phone} {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 345px 345px 345px 345px;
+      }
+      .course__card {
+        background-color: $color-default-lightest;
+        position: relative;
+        box-shadow: -25px 45px 150px $color-border-button-grey;
+        border-radius: 5px;
+        .course__image {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          &.none__white {
+            top: 32px;
+          }
+          &.have__white {
+            top: 6px;
+          }
+        }
+        .course__header {
+          position: absolute;
+          bottom: 45px;
+          left: 20px;
+          font-size: 14px;
+          .course__title {
+            font-weight: 400;
+          }
+          .course__price {
+            font-weight: 300;
+            color: $orange-dark;
+          }
+        }
+        .btn {
+          &.btn__buy__course {
+            position: absolute;
+            bottom: 0%;
+            right: 20px;
+            transform: translateY(50%);
+            font-size: 10px;
+            padding: 9px 13px;
+            @include border-radius-custom(1px, $color-border-button-grey, $grey-medium, $color-default-darkest, 50px);
+          }
+          &:hover {
+            opacity: 1;
+            background-color: $orange-dark;
+            color: $color-default-lightest;
+          }
+        }
+        .course__flag__new {
+          text-align: center;
+          line-height: 36px;
+          color: $color-default-lightest;
+          font-weight: 400;
+          border-bottom: 36px solid $orange-dark;
+          border-left: 36px solid transparent;
+          border-right: 36px solid transparent;
+          height: 0;
+          width: 78px;
+          box-shadow: 0 2px $color-box-shadow;
+          transform: rotateZ(45deg);
+          position: absolute;
+          right: -35px;
+          top: 22px;
+        }
+      }
+    }
+    .online__footer {
+      position: inherit;
+      a {    
+        float: right;
+        &::before {
+          content: "";
+          width: calc(100% - 130px);
+          border: 1px solid $grey-medium;
+          position: absolute;
+          margin-top: 7px;
+          left: 0;
+        }
+      }
+    }
+  }
+}

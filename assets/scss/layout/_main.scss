@@ -1,0 +1,139 @@
+html {
+  scroll-behavior: smooth;
+}
+
+// Container begin
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}  // Container end
+
+// Resolve social icon
+.social__icon {
+  a {
+    color: $color-default-lightest;
+    opacity: 0.5;
+
+    img {
+      opacity: 0.5;
+    }
+
+    &:hover {
+      opacity: 1.0;
+
+      img {
+        opacity: 1.0;
+      }
+    }
+  }
+}  // End resolve
+
+// Resolve slick slider
+.slick-slider {
+  ul {
+    position: absolute;
+    &.slick-dots {
+      bottom: 0;
+      li {
+        margin-right: 10px;
+        margin-left: 0;
+        padding: 0;
+        width: 10px;
+        height: 10px;
+        button {
+          &::before {
+            font-size: 0;
+            opacity: 0.8;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}  // End resolve
+
+// Resolve h2 title
+.title {
+  position: relative;
+  h2 {
+    margin-bottom: 60px;
+    font-weight: 400;
+    font-size: 48px;
+    @media #{$info-tablet-vertical}{
+     font-size: 36px;
+    }
+    &::after {
+      @include line-simple-color(170px, 4px, $orange-dark);
+      top: 86px;
+      left: 0;
+    }
+  } 
+}
+ // End resolve
+
+// Resolve content above title
+.content {
+    h5 {
+      font-size: 24px;
+      margin-bottom: 17px;
+      font-weight: 400;
+    }
+    p {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+}
+
+// Resolve button
+.btn {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
+
+// Control position of buttons group
+.buttons {
+  display: block;
+  height: 0;
+  svg {
+    color: $orange-dark;
+    font-size: 14px;
+    transform: translateY(-2px);
+  }
+}
+
+
+// Resolve transform to new modal or see more information of section
+
+.transform__modal {
+  a {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 900;
+    color: $color-default-darkest;
+    span {
+      border: solid $color-start;
+      border-width: 0 3.5px 3.5px 0;
+      display: inline-block;
+      padding: 2.5px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      margin-top: 2px;
+      margin-left: 2px;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.home {
+  // Container
+  .container {
+    text-transform: uppercase;
+    z-index: 1;
+    color: $color-default-lightest;
+    .home__content {
+      h1 {
+        width: 600px;
+      top: 316px;
+      font-size: 60px;
+      position: absolute;
+      p {
+        font-weight: 300;
+      }
+      @media #{$info-phone}{
+        width: 300px;
+        top: 200px;
+        font-size: 46px;
+      }
+    }
+  }
+
+    // Resolve toBottom button
+    .home__toBottom {
+      top: 680px;
+      position: absolute;
+      right: 15px;
+      @media #{$info-phone}{
+        top: 490px;
+      }
+      .toBottom__content {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 20px;
+        margin-bottom: 52px;
+        -moz-transform: translate(-50%, -50%) rotate(-90deg) translateY(67px);
+        -webkit-transform: translate(-50%, -50%) rotate(-90deg) translateY(67px);
+        transform: translate(-50%, -50%) rotate(-90deg) translateY(67px);
+        @media #{$info-phone}{
+          margin-bottom: 39px;
+        }
+      }
+      .toBottom__img {
+        display: block;
+        float: right;
+      }
+    } // End resolve
+  } // End resolve container
+
+  .home__background {
+    position: relative;
+    // Resolve slick dotted
+    &.slick-slider {
+      margin-bottom: 0;
+      &.slick-dotted {
+        ul{
+          transform: translate(0, -102px);
+          text-align: left;
+          width: 200px;
+          padding-left: 15px;
+          padding-right: 15px;
+          &.slick-dots {
+            @media #{$info-phone}{
+              bottom: -40px;
+            }
+            li {
+              @media #{$info-phone}{
+                display: inline-block;
+              }
+              button{
+                width: 0;
+                height: 0;
+                &::before {
+                  border: 1px solid $color-default-lightest;
+                }
+              }
+              &.slick-active {
+                button::before{
+                  background-color: $color-default-lightest;
+                }
+                @media #{$info-phone}{
+                  button::before {
+                    background-color: $color-default-lightest;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      // Resolve background__item
+    }
+
+    .home__background__item {
+      background-size: cover ;
+      background-position: center;
+      height: 900px;
+      @media #{$info-phone}{
+        height: 700px;
+      }
+    } // End Resolve
+  }
+
+  // Control position of buttons group
+  .buttons {
+    transform: translate(135px, -116px);
+    @media #{$info-phone}{
+      transform: translate(135px, -76px);
+    }
+    .play__01 {
+      display: none;
+    }
+  }
+}
