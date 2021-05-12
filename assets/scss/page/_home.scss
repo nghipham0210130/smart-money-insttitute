@@ -110,5 +110,8 @@
     @media #{$info-phone}{
       transform: translate(135px, -76px);
     }
+    .play__01 {
+      display: none;
+    }
   }
 }

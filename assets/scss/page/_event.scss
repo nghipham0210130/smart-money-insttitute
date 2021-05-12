@@ -6,10 +6,11 @@
   .event__banner {
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     height: 621px;
     position: relative;
+    padding-left: 15px;
     .event__banner__content {
-      padding-left: 15px;
       position: absolute;
       top: 356px;
       p {
@@ -26,7 +27,6 @@
       }
     }
     .btn__sign__up__join {
-      padding-left: 15px;
       position: absolute;
       bottom: 73px;
       @include border-radius-custom-gradient(0, $grey-dark, $orange-dark, $orange-light, $color-default-lightest, 50px);
@@ -39,18 +39,24 @@
     padding-top: 90px;
     padding-bottom: 6px;
     position: relative;
-    padding-right: 14px;
+    padding-right: 15px;
     max-width: 600px;
+    &::before {
+      @include line-simple-color(calc(100% + 55px), 4px, $color-line-grey);
+      left: -70px;
+      top: 176px;
+    }
+    @media #{$info-tablet-vertical}{
+      padding-left: 15px;
+      &::before {
+        @include line-simple-color(100%, 4px, $color-line-grey);
+        left: 0;
+      }
+    }
+   
     .event__info__title {
       &.title {
-        margin-bottom: 60px;;
-        h2::after {
-          left: 0;
-        }
-        h2::before {
-          left: -70px;
-          width: calc(100% + 70px);
-        }
+        margin-bottom: 60px;
       }
     }
     .event__info__grid {

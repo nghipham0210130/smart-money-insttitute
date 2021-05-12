@@ -2,12 +2,19 @@
   position: relative;
   .footer__grid {
     padding-top: 102px;
+    padding-bottom: 65px;
     &.container {
       display: grid;
       column-gap: 30px;
       row-gap: 1px;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 182px 70px 24px;
+      grid-template-rows: 182px 63px 24px;
+      z-index: 1;
+      @media #{$info-tablet-vertical}{
+        column-gap: 10px;
+        row-gap: 15px;
+        grid-template-rows: 182px 182px 182px 24px;
+      }
       .footer__grid__item {
         font-size: 14px;
         h4 {
@@ -23,13 +30,23 @@
       }
       .contact {
         grid-column: 2/3;
+        @media #{$info-tablet-vertical}{
+          grid-column: 1/4;
+        }
       }
       .working__time {
         grid-column: 3/4;
         margin-left: 39px;
+        @media #{$info-tablet-vertical}{
+          grid-column: 1/4;
+          margin-left: 0;
+        }
       }
       .link {
         grid-column: 2/4;
+        @media #{$info-tablet-vertical}{
+          grid-column: 1/4;
+        }
         display: flex;
         justify-content: space-between;
         position: relative;
@@ -43,9 +60,19 @@
           .social__btn {
             font-size: 12px;
             line-height: 12px;
-
+            @media #{$info-tablet-vertical}{
+              display: flex;
+              flex-direction: row;
+              margin-bottom: 20px;
+            }
+           
             &.btn {
               text-transform: capitalize;
+              svg {
+                @media #{$info-tablet-vertical}{
+                  margin-right: 3px;
+                }
+              }
             }
             &.social__btn--blue {
               padding: 13px 32px 11px 32px;
@@ -70,16 +97,25 @@
         &::after {
           @include line-simple-color(100%, 1px, $color-border-button-grey);
           top: 48px;
+          @media #{$info-phone}{
+            top: 188px;
+          }
         }
       }
       .signature {
         grid-column: 2/4;
+        @media #{$info-tablet-vertical}{
+          grid-column: 1/4;
+        }
       }
     }
   }
   .footer__image {
     position: absolute;
     top: 31px;
+    @media #{$info-phone}{
+      top: 367px;
+    }
     img {
       height: calc(100% - 31px);
       min-width: 340px;

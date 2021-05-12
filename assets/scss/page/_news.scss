@@ -3,15 +3,27 @@
     .container {
         padding-top: 90px;
         padding-bottom: 107px;
-        .title {
-            h2 {
-                margin-bottom: 56px;
+        &::before {
+            @include line-simple-color(calc(100% - 30px), 4px, $color-line-grey);
+            left: 15px;
+            top: 176px;
+            @media #{$info-phone}{
+                @include line-simple-color(100%, 4px, $color-line-grey);
+                left: 0;
             }
+        }
+        .title {
+            margin-bottom: 56px;
         }
         .news__grid {
             display: grid;
             column-gap: 30px;
             grid-template-columns: 1fr 1fr 1fr 1fr;
+            @media #{$info-phone} {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 30px 20px;
+            }
             .news__grid__card {
                 .card__header {
                     height: 170px;

@@ -45,6 +45,11 @@ $(function() {
         //End if
     };
 
+    // Event when click toBottom
+    $(".toBottom__img").on("click", function() {
+        window.scrollTo(0,document.body.scrollHeight);
+    })
+
     // Action when load and resize
     $( window ).on("load resize",function() {
 
@@ -64,9 +69,6 @@ $(function() {
             var rightContainAbout = 530 + marginForElementSameContainer;
             $(".about").css( "grid-template-columns", leftContainAbout + "px " + rightContainAbout + "px" );
 
-            // Set max-width for about image
-            var maxWidthOfAboutImage = 530 + marginForElementSameContainer;
-            $(".about__image").css( "max-width", maxWidthOfAboutImage + "px" );
 
              // Set width for background cover introduce container
             var widthOfIntroduceContainer = 530 + marginForElementSameContainer;
@@ -92,49 +94,84 @@ $(function() {
             var distanceOfSlickArrow = marginForElementSameContainer + 5;
             $(".slick-prev").css( "left", distanceOfSlickArrow + "px" );
             $(".slick-next").css( "right", distanceOfSlickArrow + "px" );
-
-            // Set position for image footer
-            var distanceLeftOfFooterImage = marginForElementSameContainer + 334;
-            $(".footer__image").css("max-width", distanceLeftOfFooterImage + "px" );
+             // Set position for ul of course
+            var leftOfDotsIntroduce = width*0.5443 + 70;
+            $(".introduce__backgrounds.slick-dotted.slick-slider ul").css({"transform":"translate(" + leftOfDotsIntroduce + "px, -100px)"});
+            // Set position for play/pause course
+            var leftOfButtonsGroup = leftOfDotsIntroduce + 120;
+            $(".introduce .buttons").css({"transform": "translate(" + leftOfButtonsGroup + "px, -114px)"});
         }
         else {
             $(".home .home__background.slick-slider").find( "ul" ).css( "margin-left", "0" );
-        }
+            $(".home").find( ".buttons" ).css( "margin-left", "" );
+            // Set margin left for about content, event__info
+            $(".about__content, .event__banner__content, .btn__sign__up__join").css( "margin-left","0" );
+            // Set margin right for content of Course and event__info
+            $(".introduce__container__content, .event__info").css( "margin-right", "0" );
+            // Set scale of two element relative to screen for about section
+            $(".about").css( "grid-template-columns", "100vw" );
 
-        // Set position for ul of course
-        var leftOfDotsIntroduce = width*0.5443 + 70;
-        $(".introduce__backgrounds.slick-dotted.slick-slider ul").css({"transform":"translate(" + leftOfDotsIntroduce + "px, -100px)"});
-        // Set position for play/pause course
-        var leftOfButtonsGroup = leftOfDotsIntroduce + 120;
-        $(".introduce .buttons").css({"transform": "translate(" + leftOfButtonsGroup + "px, -114px)"});
+
+             // Set width for background cover introduce container
+            $(".introduce__container").css( "width", "100vw" );
+
+            // Set margin-left for background cover introduce container
+            $(".introduce__container").css( "margin-left",  "0" );
+            $(".event").css( "grid-template-columns", "1fr" );
+
+            // Set width to back section
+            $(".event").css( "grid-template-columns",  "1fr" );
+
+            // Set position for buttons of feedback
+            $(".feedback").find(".buttons").css( "transform", "translate(" + distanceLeftFeedbackButtons + "px, -114px)");
+
+            // Set position for slick-arrow
+            $(".slick-prev").css( "left", "15px" );
+            $(".slick-next").css( "right", "15px" );
+            
+        }
     });
 
     // Action when click pause button in home background
-    $('.pause').on('click', function() {
+    $('.pause__01').on('click', function() {
         $('.home__background, .introduce__backgrounds').slick('slickPause');
-        $('.pause').css( "display", "none" );
-        $('.play').css( "display", "block" );
+        $('.pause__01').css( "display", "none" );
+        $('.play__01').css( "display", "block" );
     });
 
     // Action when click play button in home background
-    $('.play').on('click', function() {
+    $('.play__01').on('click', function() {
         $('.home__background, .introduce__backgrounds').slick('slickPlay');
-        $('.play').css( "display", "none" );
-        $('.pause').css( "display", "block" );
+        $('.play__01').css( "display", "none" );
+        $('.pause__01').css( "display", "block" );
     });
 
     // Action when click pause button in introduce background
-    $('.pause').on('click', function() {
+    $('.pause__02').on('click', function() {
         $('.introduce__backgrounds').slick('slickPause');
-        $('.pause').css( "display", "none" );
-        $('.play').css( "display", "block" );
+        $('.pause__02').css( "display", "none" );
+        $('.play__02').css( "display", "block" );
     });
 
     // Action when click play button in introduce background
-    $('.play').on('click', function() {
+    $('.play__02').on('click', function() {
         $('.introduce__backgrounds').slick('slickPlay');
-        $('.play').css( "display", "none" );
-        $('.pause').css( "display", "block" );
+        $('.play__02').css( "display", "none" );
+        $('.pause__02').css( "display", "block" );
+    });
+
+    // Action when click pause button in feedback background
+    $('.pause__03').on('click', function() {
+        $('.feedback__backgrounds').slick('slickPause');
+        $('.pause__03').css( "display", "none" );
+        $('.play__03').css( "display", "block" );
+    });
+
+    // Action when click play button in introduce background
+    $('.play__03').on('click', function() {
+        $('.feedback__backgrounds').slick('slickPlay');
+        $('.play__03').css( "display", "none" );
+        $('.pause__03').css( "display", "block" );
     });
 
     // Add active for nav__online__link when clicked
@@ -163,6 +200,30 @@ $(function() {
             });
             $(this).addClass('suggest__course__link__active');
         } //End if
+    });
+
+    
+    // Use slick slider for home__background, introduce__background, feedback__backgrounds
+    $('.home__background, .introduce__backgrounds').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        arrows: false,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 2000
+    });
+
+    $('.feedback__backgrounds').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        arrows: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 2000
     });
 
     /**
@@ -198,25 +259,22 @@ $(function() {
         //End if
     });
 
-    $('.home__background, .introduce__backgrounds').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        arrows: false,
-        cssEase: 'linear',
-        //autoplay: true,
-        autoplaySpeed: 2000
-    });
+     /**
+     * Event move to new section
+     */
+      function onScroll(event){
+        var scrollPos = $(document).scrollTop();
+        $("#my__navbar a").each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if ((refElement.position().top - navHeight) <= scrollPos && (refElement.position().top - navHeight + refElement.height()) > scrollPos) {
+                $("#my__navbar a").removeClass("active");
+                currLink.addClass("active");
+            }
+            else{
+                currLink.removeClass("active");
+            }
+        });
+    }
 
-    $('.feedback__backgrounds').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        arrows: true,
-        cssEase: 'linear',
-        //autoplay: true,
-        autoplaySpeed: 2000
-    });
 });

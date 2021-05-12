@@ -3,14 +3,28 @@
     height: 620px;
     z-index: 1;
     position: absolute;
+    &::before {
+      @include line-simple-color(100%, 4px, $color-line-grey);
+      left: 0;
+      top: 176px;
+    }
+    @media #{$info-phone}{
+      height: 80vh;
+    }
     .introduce__container__content {
       opacity: 1.0;
       padding: 90px 15px 246px 0;
       position: absolute;
       left: 70px;
+      @media #{$info-phone}{
+        ppadding: 90px 15px 246px 15px;
+      }
       .title {
         color: $color-default-lightest;
           margin-bottom: 56px;
+          @media #{$info-phone}{
+            margin-bottom: 200px;
+          }
           h2::after {
             left: 0;
           }
@@ -40,7 +54,9 @@
           z-index: 1;
           &.slick-dots {
             @media #{$info-phone}{
-              bottom: -40px;
+              bottom: 63px;
+              left: 50%;
+              transform: translate(-50%);
             }
             li {
               @media #{$info-phone}{
@@ -74,15 +90,19 @@
       height: 620px;
       position: relative;
       @media #{$info-phone}{
-        height: 400px;
+        height: 80vh;
+        opacity: 0.5;
       }
     }
   }
   // Control position of buttons group
   .buttons {
-    transform: translate(135px, -116px);
-    @media #{$info-phone}{
-      transform: translate(135px, -76px);
+    transform: translate(1135px, -116px);
+    .play__02 {
+      display: none;
     }
+    @media #{$info-phone}{
+      transform: translate(245px, -76px);
+   }
   }
 }
