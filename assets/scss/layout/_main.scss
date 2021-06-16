@@ -1,0 +1,82 @@
+// Container begin
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}  // Container end
+
+// Resolve social icon
+.social__icon {
+  a {
+    color: $color-default-lightest;
+    opacity: 0.5;
+
+    img {
+      opacity: 0.5;
+    }
+
+    &:hover {
+      opacity: 1.0;
+
+      img {
+        opacity: 1.0;
+      }
+    }
+  }
+}  // End resolve
+
+// Resolve slick slider
+.slick-slider {
+  ul {
+    position: absolute;
+    &.slick-dots {
+      bottom: 0;
+      li {
+        margin-right: 10px;
+        margin-left: 0;
+        padding: 0;
+        width: 10px;
+        height: 10px;
+        button {
+          &::before {
+            font-size: 0;
+            opacity: 0.8;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}  // End resolve
+
+// Resolve title
+.tilte {
+  h4 {
+    font-size: 48px;
+    font-weight: 300;
+    color: $color-default-darkest;
+    @media #{$info-phone}{
+      font-size: 36px;
+    }
+  }
+  &::after{
+    @include line-simple-color(170px, 4px, $orange-dark);
+  }
+}  // End resolve
+
+// Resolve button
+.btn {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
